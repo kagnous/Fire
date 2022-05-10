@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Grabable : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
     private GameObject level;
+
+    [SerializeField, Tooltip("Comportement du feu à combustion")]
+    private Fuel fuel;  public Fuel FuelParam => fuel;
+
     public bool _isGrabed = false;
     private int test = 0;
 
@@ -22,7 +26,7 @@ public class Grabable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("In range");
+            Debug.Log("In range");
             test++;
             if(test > 1)
                 test = 1;
@@ -35,7 +39,7 @@ public class Grabable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //Debug.Log("No in range");
+            Debug.Log("No in range");
             test--;
             collision.gameObject.GetComponent<PlayerController>().eventInterract -= Grab;
         }
@@ -56,8 +60,6 @@ public class Grabable : MonoBehaviour
         else
         {
             //Debug.Log("Degrab");
-            //rb.useGravity = true;
-            //rb.constraints = RigidbodyConstraints.None;
             transform.SetParent(level.transform);
             rb = gameObject.AddComponent<Rigidbody>();
             _isGrabed = false;

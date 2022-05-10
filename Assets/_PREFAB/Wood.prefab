@@ -141,5 +141,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635927a26be420c46bc5367a49387ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  fuel: {fileID: 11400000, guid: d461286984d90df4b824b1c3798b0157, type: 2}
   _isGrabed: 0
