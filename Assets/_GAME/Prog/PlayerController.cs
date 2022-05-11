@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DisallowMultipleComponent]
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody rb;
+    [SerializeField, Tooltip("Vitesse de déplacement du personnage")]
+    private float _speed = 5;
+
+    private Rigidbody _rb;
     private Controls _inputsInstance;
     private Vector2 _directionMovment;
-
-    public float speed = 1;
 
     // Event
     public delegate void InterractDelegate(Transform transform);
@@ -17,41 +19,50 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
         _inputsInstance = new Controls();
     }
 
     private void OnEnable()
     {
+        // Assignation des fonctions aux Inputs
         _inputsInstance.Player.Enable();
         _inputsInstance.Player.Move.performed += Move;
         _inputsInstance.Player.Grab.performed += Interract;
     }
     private void OnDisable()
     {
+        // Désassignation des fonctions aux Inputs
         _inputsInstance.Player.Move.performed -= Move;
         _inputsInstance.Player.Grab.performed -= Interract;
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(_directionMovment.x, -0.1f, _directionMovment.y) * speed;
+        // Déplace le player en fonction de _directionMovment (pas en y) et de sa speed
+        _rb.velocity = new Vector3(_directionMovment.x, -0.1f, _directionMovment.y) * _speed;
 
         //Le perso se tourne vers là où il se dirige si la direction est pas (0,0,0)
         if (_directionMovment != Vector2.zero)
         { transform.rotation = Quaternion.LookRotation(new Vector3(_directionMovment.x, 0, _directionMovment.y)); }
     }
 
+    /// <summary>
+    /// Récupère et met à jours l'axe de mouvement
+    /// </summary>
+    /// <param name="context">valeur Vecteur2 de l'input</param>
     public void Move(InputAction.CallbackContext context)
     {
         _directionMovment = context.ReadValue<Vector2>();
-        //Debug.Log("Move\n"+ context.ReadValue<Vector2>());
+            //Debug.Log("Move\n"+ context.ReadValue<Vector2>());
     }
 
+    /// <summary>
+    /// Lance l'event d'Interract quand l'input est appelé
+    /// </summary>
     private void Interract(InputAction.CallbackContext context)
     {
-        //Debug.Log(eventInterract.);
-
         eventInterract?.Invoke(transform);
+            //Debug.Log(eventInterract.);
     }
 }

@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4779102096187765497, guid: 07da03cf971aaca41929a56fbb39eacd, type: 3}
+      propertyPath: fuel
+      value: 
+      objectReference: {fileID: 11400000, guid: d491cb75eb59eac41bce3d3aae886a1a, type: 2}
     - target: {fileID: 4779102096187765503, guid: 07da03cf971aaca41929a56fbb39eacd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -437,6 +441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4779102096187765497, guid: 07da03cf971aaca41929a56fbb39eacd, type: 3}
+      propertyPath: fuel
+      value: 
+      objectReference: {fileID: 11400000, guid: b08ce2573f7cfa944af1515e39e02130, type: 2}
     - target: {fileID: 4779102096187765503, guid: 07da03cf971aaca41929a56fbb39eacd, type: 3}
       propertyPath: m_RootOrder
       value: 2
