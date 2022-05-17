@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f705f996b54e534d8d51fcf6acc66cc
+guid: f3639ce04c411bd43ac1df5fc10f2803
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Caillou3
-    second: {fileID: 2100000, guid: 52f31e93ede6bac4e8a36b297042ae31, type: 2}
+      name: pneu
+    second: {fileID: 2100000, guid: 8957b0c039535b74f800d2b03c1a646a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
