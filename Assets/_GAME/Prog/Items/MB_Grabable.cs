@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class Grabable : MonoBehaviour
+public class MB_Grabable : MonoBehaviour
 {
     [SerializeField, Tooltip("Comportement du feu à combustion")]
-    private Fuel fuel;  public Fuel FuelParam => fuel;
+    private SO_FuelParameters fuel;  public SO_FuelParameters FuelParam => fuel;
 
     private Rigidbody rb;
     private GameObject level;
@@ -34,7 +34,7 @@ public class Grabable : MonoBehaviour
                 debugAssign = 1;
             else
             // On abonne la fonction Grab à l'event d'Interract du PlayerController
-            other.gameObject.GetComponent<PlayerController>().eventInterract += Grab;
+            other.gameObject.GetComponent<MB_PlayerController>().eventGrab += Grab;
         }
     }
 
@@ -45,7 +45,7 @@ public class Grabable : MonoBehaviour
                 //Debug.Log("No in range");
             debugAssign--;
             // On désabonne la fonction Grab à l'event d'Interract du PlayerController
-            collision.gameObject.GetComponent<PlayerController>().eventInterract -= Grab;
+            collision.gameObject.GetComponent<MB_PlayerController>().eventGrab -= Grab;
         }
     }
 
@@ -79,7 +79,7 @@ public class Grabable : MonoBehaviour
     /// </summary>
     public void Burn()
     {
-        FindObjectOfType<PlayerController>().eventInterract -= Grab;
+        FindObjectOfType<MB_PlayerController>().eventGrab -= Grab;
         Destroy(gameObject);
     }
 }

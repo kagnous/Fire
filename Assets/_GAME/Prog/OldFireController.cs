@@ -21,11 +21,11 @@ public class FireController : MonoBehaviour
         if (other.CompareTag("Fuel"))
         {
             // On récupère le script de combustible
-            Grabable fuel = other.GetComponent<Grabable>();
+            MB_Grabable fuel = other.GetComponent<MB_Grabable>();
 
             // On set le feu en fonction des paramètres du combustible
-            PSRenderer.material = fuel.FuelParam.ParticuleMaterial;
-            PSShape.shapeType = fuel.FuelParam.ShapeType;
+            //PSRenderer.material = fuel.FuelParam.ParticuleMaterial;
+            //PSShape.shapeType = fuel.FuelParam.ShapeType;
 
             // On brûle (détruit) le combustible
             fuel.Burn();

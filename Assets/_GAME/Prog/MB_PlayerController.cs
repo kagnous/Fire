@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [DisallowMultipleComponent]
-public class PlayerController : MonoBehaviour
+public class MB_PlayerController : MonoBehaviour
 {
     [SerializeField, Tooltip("Vitesse de déplacement du personnage")]
     private float _speed = 5;
@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     // Event
     public delegate void InterractDelegate(Transform transform);
+    public event InterractDelegate eventGrab;
     public event InterractDelegate eventInterract;
 
     private void Awake()
@@ -28,13 +29,15 @@ public class PlayerController : MonoBehaviour
         // Assignation des fonctions aux Inputs
         _inputsInstance.Player.Enable();
         _inputsInstance.Player.Move.performed += Move;
-        _inputsInstance.Player.Grab.performed += Interract;
+        _inputsInstance.Player.Grab.performed += Grab;
+        _inputsInstance.Player.Interract.performed += Interract;
     }
     private void OnDisable()
     {
         // Désassignation des fonctions aux Inputs
         _inputsInstance.Player.Move.performed -= Move;
-        _inputsInstance.Player.Grab.performed -= Interract;
+        _inputsInstance.Player.Grab.performed -= Grab;
+        _inputsInstance.Player.Interract.performed -= Interract;
     }
 
     void FixedUpdate()
@@ -58,11 +61,21 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// Lance l'event de Grab quand l'input est appelé
+    /// </summary>
+    private void Grab(InputAction.CallbackContext context)
+    {
+        eventGrab?.Invoke(transform);
+            //Debug.Log("eventGrab");
+    }
+
+
+    /// <summary>
     /// Lance l'event d'Interract quand l'input est appelé
     /// </summary>
     private void Interract(InputAction.CallbackContext context)
     {
         eventInterract?.Invoke(transform);
-            //Debug.Log(eventInterract.);
+            //Debug.Log("eventInterract");
     }
 }

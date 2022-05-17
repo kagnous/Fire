@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [DisallowMultipleComponent]
-public class CameraController : MonoBehaviour
+public class MB_CameraController : MonoBehaviour
 {
     private Controls _inputsInstance;
     private Vector2 _rotateAxis;
