@@ -39,5 +39,9 @@ public class MB_TentController : MB_Interractable
     private void FireIncrease()
     {
         actualFireInterract++;
+        if(actualFireInterract >= _minInterract)
+        {
+            Debug.Log("Lampe s'allume");
+        }
     }
 }

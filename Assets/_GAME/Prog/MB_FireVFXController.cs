@@ -45,7 +45,7 @@ public class MB_FireVFXController : MonoBehaviour
             eventFireChange?.Invoke();
 
             // On brûle (détruit) le combustible
-            item.Burn();
+            item.Burn(transform);
         }
     }
 

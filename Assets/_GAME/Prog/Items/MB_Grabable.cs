@@ -10,6 +10,9 @@ public class MB_Grabable : MonoBehaviour
 
     private Rigidbody rb;
     private GameObject level;
+    private GameObject _canvas;
+
+    private ParticleSystem _ps;
 
     private bool _isGrabed = false;
     private int debugAssign = 0;
@@ -17,6 +20,9 @@ public class MB_Grabable : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        _ps = GetComponent<ParticleSystem>();
+        _canvas = GetComponentInChildren<Canvas>().gameObject;
+        _canvas.SetActive(false);
     }
     private void Start()
     {
@@ -35,6 +41,8 @@ public class MB_Grabable : MonoBehaviour
             else
             // On abonne la fonction Grab à l'event d'Interract du PlayerController
             other.gameObject.GetComponent<MB_PlayerController>().eventGrab += Grab;
+
+            _canvas.SetActive(true);
         }
     }
 
@@ -46,6 +54,8 @@ public class MB_Grabable : MonoBehaviour
             debugAssign--;
             // On désabonne la fonction Grab à l'event d'Interract du PlayerController
             collision.gameObject.GetComponent<MB_PlayerController>().eventGrab -= Grab;
+
+            _canvas.SetActive(false);
         }
     }
 
@@ -62,6 +72,7 @@ public class MB_Grabable : MonoBehaviour
             transform.position = parent.Find("GrabPoint").position;
             transform.SetParent(parent);
             _isGrabed = true;
+            _canvas.SetActive(false);
         }
         else
         {
@@ -77,9 +88,20 @@ public class MB_Grabable : MonoBehaviour
     /// <summary>
     /// Actions à effectuer avant de détruire l'objet par le feu
     /// </summary>
-    public void Burn()
+    public void Burn(Transform fire)
     {
         FindObjectOfType<MB_PlayerController>().eventGrab -= Grab;
-        Destroy(gameObject);
+        // On active les particules de destructions
+        _ps.Play();
+        // On efface les trucs chiants de l'objet
+        GetComponent<Collider>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
+
+        // On met le combustible sur le feu
+        transform.position = fire.position;
+        transform.SetParent(fire);
+
+        // On détruit l'obet quand il a finis de faire ses particules
+        Destroy(gameObject, _ps.main.duration);
     }
 }
