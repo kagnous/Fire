@@ -5,11 +5,20 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public abstract class MB_Interractable : MonoBehaviour
 {
+    private GameObject _canvas;
+
+    private void Awake()
+    {
+        _canvas = GetComponentInChildren<Canvas>().gameObject;
+        _canvas.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             other.GetComponent<MB_PlayerController>().eventInterract += Interract;
+            _canvas.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -17,6 +26,7 @@ public abstract class MB_Interractable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<MB_PlayerController>().eventInterract -= Interract;
+            _canvas.SetActive(false);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MB_TentController : MB_Interractable
 {
@@ -25,7 +26,7 @@ public class MB_TentController : MB_Interractable
     {
         if(actualFireInterract >= _minInterract)
         {
-            Debug.Log("Dodo\nFin du niveau");
+            SceneManager.LoadScene("MainMenu");
         }
         else
         {
@@ -39,5 +40,9 @@ public class MB_TentController : MB_Interractable
     private void FireIncrease()
     {
         actualFireInterract++;
+        if(actualFireInterract >= _minInterract)
+        {
+            Debug.Log("Lampe s'allume");
+        }
     }
 }
