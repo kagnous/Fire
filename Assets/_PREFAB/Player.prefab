@@ -328,4 +328,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800201188754327194}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}

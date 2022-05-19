@@ -95,7 +95,7 @@ public class MB_Grabable : MonoBehaviour
         _ps.Play();
         // On efface les trucs chiants de l'objet
         GetComponent<Collider>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = false;
+        GetComponentInChildren<MeshRenderer>().enabled = false;
 
         // On met le combustible sur le feu
         transform.position = fire.position;
