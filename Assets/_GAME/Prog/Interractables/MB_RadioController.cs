@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MB_RadioController : MB_Interractable
 {
+    private AudioSource audioSource;
+
+    AudioClip test;
+
     [SerializeField, Tooltip("Liste de musiques")]
     private RadioStation[] stations;
 
@@ -12,16 +16,22 @@ public class MB_RadioController : MB_Interractable
     /// </summary>
     private int actualStation = 0;
 
+    private void Start()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+    }
+
     protected override void Interract(Transform player)
     {
+        audioSource.Stop();
         if(actualStation > stations.Length-1)
         {
             actualStation = 0;
             Debug.Log("Stop radio");
-            // Coupe la radio
         }
         else
         {
+            audioSource.PlayOneShot(stations[actualStation].Songs[0]);
             Debug.Log("Play : " + stations[actualStation].Name);
             actualStation++;
         }
@@ -35,5 +45,5 @@ public struct RadioStation
     private string name; public string Name => name;
 
     [SerializeField, Tooltip("Liste des musiques jouées par la station")]
-    private int[] songs; public int[] Songs => songs;
+    private AudioClip[] songs; public AudioClip[] Songs => songs;
 }
