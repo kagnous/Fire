@@ -5,7 +5,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public abstract class MB_Interractable : MonoBehaviour
 {
-    private GameObject _canvas;
+    protected GameObject _canvas;
 
     private void Awake()
     {
@@ -13,7 +13,7 @@ public abstract class MB_Interractable : MonoBehaviour
         _canvas.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {

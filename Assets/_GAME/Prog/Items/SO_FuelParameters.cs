@@ -11,6 +11,8 @@ public class SO_FuelParameters : ScriptableObject
     [SerializeField, Tooltip("Augmentaion de la taille du feu")]
     private float _upSize;       public float UpSize => _upSize;
 
+    public bool _changeColor = false;
+
     [GradientUsage(true), SerializeField, Tooltip("Couleur que prend le feu")]
     public Gradient _color;
 }

@@ -8,6 +8,8 @@ public class MB_TentController : MB_Interractable
     [SerializeField, Tooltip("Nombre d'interraction requise avec le feu pour finir le niveau")]
     private int _minInterract = 3;
 
+    private GameObject okLight;
+
     /// <summary>
     /// Nombre d'interractions déjà effectuées par le joueur
     /// </summary>
@@ -15,12 +17,22 @@ public class MB_TentController : MB_Interractable
 
     private void Start()
     {
+        okLight = GetComponentInChildren<Light>().gameObject;
+        okLight.SetActive(false);
         FindObjectOfType<MB_FireVFXController>().eventFireChange += FireIncrease;
     }
     /*private void OnDisable()
     {
         FindObjectOfType<FireVFXController>().eventFireChange -= FireIncrease;
     }*/
+
+    protected override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+
+        if(actualFireInterract < _minInterract)
+        _canvas.SetActive(false);
+    }
 
     protected override void Interract(Transform player)
     {
@@ -42,7 +54,7 @@ public class MB_TentController : MB_Interractable
         actualFireInterract++;
         if(actualFireInterract >= _minInterract)
         {
-            Debug.Log("Lampe s'allume");
+            okLight.SetActive(true);
         }
     }
 }

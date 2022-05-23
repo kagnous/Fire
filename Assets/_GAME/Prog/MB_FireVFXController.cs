@@ -56,9 +56,13 @@ public class MB_FireVFXController : MonoBehaviour
     {
         //_VFX.Stop();
         _VFX.SetTexture("FlameTexture", fuel.Texture);
-        _VFX.SetGradient("FlameGradient", fuel._color);
 
-        mainModule.startColor = fuel._color.colorKeys[0].color;
+        if(fuel._changeColor)
+        {
+            _VFX.SetGradient("FlameGradient", fuel._color);
+            mainModule.startColor = fuel._color.colorKeys[0].color;
+        }
+
         IncreaseSize("FlameMaxSize", "FlameMinSize", fuel.UpSize);
     }
 
