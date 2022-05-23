@@ -18,7 +18,7 @@ public class MB_RadioController : MB_Interractable
 
     private void Start()
     {
-        audioSource = FindObjectOfType<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected override void Interract(Transform player)
