@@ -26,6 +26,14 @@ public class MB_TentController : MB_Interractable
         FindObjectOfType<FireVFXController>().eventFireChange -= FireIncrease;
     }*/
 
+    protected override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+
+        if(actualFireInterract < _minInterract)
+        _canvas.SetActive(false);
+    }
+
     protected override void Interract(Transform player)
     {
         if(actualFireInterract >= _minInterract)
