@@ -214,7 +214,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""name"": ""Up/Down"",
                     ""type"": ""Value"",
                     ""id"": ""dbbbb4cb-b620-4939-bcd8-bdc317fa4584"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -301,7 +301,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b0f19cd8-1309-4934-a10a-ad29f071442f"",
-                    ""path"": ""<Joystick>/stick/x"",
+                    ""path"": ""<Gamepad>/rightStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -341,6 +341,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Up/Down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""726b6cb8-f265-4be2-b428-d765232a5e09"",
+                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up/Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
