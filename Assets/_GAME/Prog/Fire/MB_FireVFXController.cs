@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
+/// <summary>
+/// Controle et modifie les VFX du feu
+/// </summary>
 [DisallowMultipleComponent]
 public class MB_FireVFXController : MonoBehaviour
 {
@@ -10,7 +13,6 @@ public class MB_FireVFXController : MonoBehaviour
     /// Le principal VFX du feu (flammes, fumée...)
     /// </summary>
     private VisualEffect _VFX;
-
     /// <summary>
     /// Particle System pour la lumière
     /// </summary>
@@ -20,33 +22,11 @@ public class MB_FireVFXController : MonoBehaviour
     /// </summary>
     private ParticleSystem.MainModule mainModule;
 
-    //Event
-    public delegate void FireChange();
-    public event FireChange eventFireChange;
-
     private void Awake()
     {
         _VFX = GetComponentInChildren<VisualEffect>();
         _light = GetComponentInChildren<ParticleSystem>();
         mainModule = _light.main;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Fuel"))
-        {
-            // On récupère le script de combustible
-            MB_Grabable item = other.GetComponent<MB_Grabable>();
-
-            // On change les VFX selon les paramètres du carburant
-            ChangeVFX(item.FuelParam);
-
-            // On dit que le feu a changé de comportement
-            eventFireChange?.Invoke();
-
-            // On brûle (détruit) le combustible
-            item.Burn(transform);
-        }
     }
 
     /// <summary>
@@ -57,10 +37,10 @@ public class MB_FireVFXController : MonoBehaviour
         //_VFX.Stop();
         _VFX.SetTexture("FlameTexture", fuel.Texture);
 
-        if(fuel._changeColor)
+        if(fuel.ChangeColor)
         {
-            _VFX.SetGradient("FlameGradient", fuel._color);
-            mainModule.startColor = fuel._color.colorKeys[0].color;
+            _VFX.SetGradient("FlameGradient", fuel.Color);
+            mainModule.startColor = fuel.Color.colorKeys[0].color;
         }
 
         IncreaseSize("FlameMaxSize", "FlameMinSize", fuel.UpSize);

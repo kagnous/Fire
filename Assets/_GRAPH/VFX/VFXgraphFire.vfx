@@ -206,13 +206,13 @@ MonoBehaviour:
   - name: Smoke
     collapsed: 1
   - name: Embers
-    collapsed: 0
+    collapsed: 1
   uiBounds:
     serializedVersion: 2
     x: 401
-    y: -260
-    width: 3375
-    height: 1772
+    y: -261
+    width: 3376
+    height: 1773
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
