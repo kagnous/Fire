@@ -3,14 +3,12 @@ using UnityEngine.InputSystem;
 
 public class MB_CameraBehavior : MonoBehaviour
 {
-    [Header("Diorama Rotation")]
-    [SerializeField]
-    [Tooltip("Diorama that will rotate")]
-    private Transform _diorama;
     
     // Final speed applied to the rotation
     private float _movementRot;
+    private Transform _diorama;
 
+    [Header("Diorama Rotation")]
     [SerializeField]
     [Tooltip("Speed which the rotation will get the maximal speed")]
     private float _rotAcceleration = 0.1f;
@@ -70,7 +68,10 @@ public class MB_CameraBehavior : MonoBehaviour
     // Input getter of the zoom
     private float _zoomInput;
 
-
+    private void Start()
+    {
+        _diorama = GameObject.FindGameObjectWithTag("Level").transform;
+    }
 
     private void FixedUpdate()
     {
