@@ -102,6 +102,7 @@ public class MB_Grabable : MonoBehaviour
         transform.SetParent(fire);
 
         // On détruit l'obet quand il a finis de faire ses particules
-        Destroy(gameObject, _ps.main.duration);
+            //Debug.Log(_ps.main.startLifetimeMultiplier + _ps.main.duration);
+        Destroy(gameObject, _ps.main.startLifetimeMultiplier + _ps.main.duration);
     }
 }

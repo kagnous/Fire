@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Parent de tout les scripts d'objets avec lequel le Player peut interragir
+/// </summary>
 [DisallowMultipleComponent]
 public abstract class MB_Interractable : MonoBehaviour
 {
