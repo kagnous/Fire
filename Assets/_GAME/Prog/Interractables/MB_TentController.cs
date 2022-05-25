@@ -1,60 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controle la tente et le fait de finir le level
+/// </summary>
 public class MB_TentController : MB_Interractable
 {
-    [SerializeField, Tooltip("Nombre d'interraction requise avec le feu pour finir le niveau")]
-    private int _minInterract = 3;
-
+    private MB_LevelManager _levelManager;
     private GameObject okLight;
 
     /// <summary>
-    /// Nombre d'interractions déjà effectuées par le joueur
+    /// Si la tente est ok pour y dormir
     /// </summary>
-    private int actualFireInterract = 0;
+    private bool _isOpen = false; public bool IsOpen { get { return _isOpen; } }  //set { _isOpen = value; }}
 
     private void Start()
     {
+        _levelManager = FindObjectOfType<MB_LevelManager>();
         okLight = GetComponentInChildren<Light>().gameObject;
         okLight.SetActive(false);
-        FindObjectOfType<MB_FireVFXController>().eventFireChange += FireIncrease;
     }
-    /*private void OnDisable()
-    {
-        FindObjectOfType<FireVFXController>().eventFireChange -= FireIncrease;
-    }*/
 
     protected override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
 
-        if(actualFireInterract < _minInterract)
-        _canvas.SetActive(false);
+        if(!_isOpen)
+            _canvas.SetActive(false);
     }
 
     protected override void Interract(Transform player)
     {
-        if(actualFireInterract >= _minInterract)
+        if(_isOpen)
         {
-            SceneManager.LoadScene("MainMenu");
+            _levelManager.FinishLevel("MainMenu");
         }
         else
         {
-            Debug.Log("nop : " + actualFireInterract);
+            Debug.Log("no");
         }
     }
 
-    /// <summary>
-    /// Fonction qui incrémente le feu
-    /// </summary>
-    private void FireIncrease()
+    public void OpenTent()
     {
-        actualFireInterract++;
-        if(actualFireInterract >= _minInterract)
+        // Si la tente n'est pas déjà ouverte
+        if(!_isOpen)
         {
+            _isOpen = true;
             okLight.SetActive(true);
+            //Animation de tente qui s'ouvre ?
         }
     }
 }
