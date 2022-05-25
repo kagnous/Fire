@@ -6,6 +6,12 @@ using UnityEngine.InputSystem;
 [DisallowMultipleComponent]
 public class MB_CameraController : MonoBehaviour
 {
+    [SerializeField]
+    private float _zoomMin;
+
+    [SerializeField]
+    private float _zoomMax;
+
     private Controls _inputsInstance;
     private Vector2 _rotateAxis;
     private Camera _camera;
