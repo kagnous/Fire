@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae693099065a0114ebf88266aec9d610, type: 3}
-  m_Name: Pneu
+  m_Name: NewFuel 1
   m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: a197ced5ee896d54a9ea36d8c9e2d6ee, type: 3}
-  _upSize: 0.5
-  _changeColor: 0
+  _texture: {fileID: 0}
+  _upSize: 0
   _color:
     serializedVersion: 2
-    key0: {r: 7.999999, g: 0, b: 0, a: 1}
-    key1: {r: 0, g: 15.37419, b: 25.098038, a: 1}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
