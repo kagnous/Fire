@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e5869a48f91524ca6e4e68a4f2fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: {fileID: 11400000, guid: a3adc9a23ff4cf44792d2a21fa3186f3, type: 2}
+  fuel: {fileID: 11400000, guid: d0848e97a0d0f1347af55fc0ffbb751d, type: 2}
 --- !u!54 &5689737793309439427
 Rigidbody:
   m_ObjectHideFlags: 0
