@@ -13,15 +13,24 @@ public class MB_PlayerController : MonoBehaviour
     private Controls _inputsInstance;
     private Vector2 _directionMovment;
 
+    [SerializeField]
+    private float _grabRange = 1;
+    [SerializeField]
+    private Transform _grabPoint;
+    private LayerMask layerMask = 1<<3;
+    private bool _isGrabing; public bool IsGrabing { get { return _isGrabing; } set { _isGrabing = value; } }
+    private GameObject _itemGrabed;
+
+
     // Event
     public delegate void InterractDelegate(Transform transform);
-    public event InterractDelegate eventGrab;
     public event InterractDelegate eventInterract;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _inputsInstance = new Controls();
+        _grabPoint = transform.Find("GrabPoint");
     }
 
     private void OnEnable()
@@ -43,11 +52,11 @@ public class MB_PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Déplace le player en fonction de _directionMovment (pas en y) et de sa speed
-        _rb.velocity = new Vector3(_directionMovment.x, -0.1f, _directionMovment.y) * _speed;
+        _rb.velocity = new Vector3(_directionMovment.x, _rb.velocity.y/_speed, _directionMovment.y) * _speed;
 
         //Le perso se tourne vers là où il se dirige si la direction est pas (0,0,0)
         if (_directionMovment != Vector2.zero)
-        { transform.rotation = Quaternion.LookRotation(new Vector3(_directionMovment.x, 0, _directionMovment.y)); }
+        { transform.rotation = Quaternion.LookRotation(new Vector3(_directionMovment.x, 0, _directionMovment.y)); } // SmoothDamp
     }
 
     /// <summary>
@@ -65,8 +74,23 @@ public class MB_PlayerController : MonoBehaviour
     /// </summary>
     private void Grab(InputAction.CallbackContext context)
     {
-        eventGrab?.Invoke(transform);
-            //Debug.Log("eventGrab");
+        if(_isGrabing)
+        {
+            _itemGrabed.GetComponent<MB_Grabable>().Degrab();
+            _isGrabing = false;
+            _itemGrabed = null;
+        }
+        else
+        {
+            Collider[] colliders = Physics.OverlapSphere(_grabPoint.position, _grabRange, layerMask);
+            if (colliders.Length > 0)
+            {
+                colliders[0].GetComponent<MB_Grabable>().Grab(transform);
+                _isGrabing = true;
+                _itemGrabed = colliders[0].gameObject;
+            }
+            //Debug.Log(Physics.OverlapSphere(_grabPoint.position, _grabRange, layerMask).Length);
+        }
     }
 
 
@@ -77,5 +101,11 @@ public class MB_PlayerController : MonoBehaviour
     {
         eventInterract?.Invoke(transform);
             //Debug.Log("eventInterract");
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(_grabPoint.position, _grabRange);
     }
 }

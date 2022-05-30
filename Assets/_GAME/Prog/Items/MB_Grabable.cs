@@ -15,7 +15,7 @@ public class MB_Grabable : MonoBehaviour
     private ParticleSystem _ps;
 
     private bool _isGrabed = false;
-    private int debugAssign = 0;
+    //private int debugAssign = 0;
 
     private void Awake()
     {
@@ -34,14 +34,6 @@ public class MB_Grabable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
                 //Debug.Log("In range");
-            debugAssign++;
-            // Si debugAssign = 2 ou plus, alors c'est qu'il n'a pas détecté la dernière sortie de collision et on réabonne pas
-            if(debugAssign > 1)
-                debugAssign = 1;
-            else
-            // On abonne la fonction Grab à l'event d'Interract du PlayerController
-            other.gameObject.GetComponent<MB_PlayerController>().eventGrab += Grab;
-
             _canvas.SetActive(true);
         }
     }
@@ -51,38 +43,29 @@ public class MB_Grabable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
                 //Debug.Log("No in range");
-            debugAssign--;
-            // On désabonne la fonction Grab à l'event d'Interract du PlayerController
-            collision.gameObject.GetComponent<MB_PlayerController>().eventGrab -= Grab;
-
             _canvas.SetActive(false);
         }
     }
 
-    private void Grab(Transform parent)
+    public void Grab(Transform parent)
     {
-            //Debug.Log("Fonction grab");
-        if(!_isGrabed)
-        {
-                //Debug.Log("Grab");
+        //Debug.Log("Grab");
 
-            // On détruit le rigidbody, positionne l'objet par rapport au player puis on met l'objet en enfant
-            Destroy(rb);
-            transform.rotation = parent.rotation;
-            transform.position = parent.Find("GrabPoint").position;
-            transform.SetParent(parent);
-            _isGrabed = true;
-            _canvas.SetActive(false);
-        }
-        else
-        {
-                //Debug.Log("Degrab");
+        // On détruit le rigidbody, positionne l'objet par rapport au player puis on met l'objet en enfant
+        Destroy(rb);
+        transform.rotation = parent.rotation;
+        transform.position = parent.Find("GrabPoint").position;
+        transform.SetParent(parent);
+        _isGrabed = true;
+        _canvas.SetActive(false);
+    }
 
-            // On récrée un rigidbody et remet l'objet en en enfant du niveau
-            transform.SetParent(level.transform);
-            rb = gameObject.AddComponent<Rigidbody>();
-            _isGrabed = false;
-        }
+    public void Degrab()
+    {
+        // On récrée un rigidbody et remet l'objet en en enfant du niveau
+        transform.SetParent(level.transform);
+        rb = gameObject.AddComponent<Rigidbody>();
+        _isGrabed = false;
     }
 
     /// <summary>
@@ -90,7 +73,9 @@ public class MB_Grabable : MonoBehaviour
     /// </summary>
     public void Burn(Transform fire)
     {
-        FindObjectOfType<MB_PlayerController>().eventGrab -= Grab;
+        //FindObjectOfType<MB_PlayerController>().eventGrab -= Grab;
+        FindObjectOfType<MB_PlayerController>().IsGrabing = false;
+
         // On active les particules de destructions
         _ps.Play();
         // On efface les trucs chiants de l'objet
