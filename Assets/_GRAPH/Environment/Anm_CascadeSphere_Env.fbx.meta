@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 2fa4c3000ab34284bb730693012f7a83
+guid: fb7be8d67c94ab045a9d4e89fcffaed2
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Anm_Mousse_Env
+    second: Take 001
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anm_Mousse_Env
+      name: Take 001
       takeName: Take 001
       internalID: 0
-      firstFrame: 126
-      lastFrame: 194
+      firstFrame: 156
+      lastFrame: 240
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -63,11 +63,11 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 125
+      additiveReferencePoseFrame: 155
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 80
+    globalScale: 70
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -120,7 +120,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.79999995
+    globalScale: 70
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
