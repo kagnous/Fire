@@ -14,9 +14,6 @@ public class MB_Grabable : MonoBehaviour
 
     private ParticleSystem _ps;
 
-    private bool _isGrabed = false;
-    //private int debugAssign = 0;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,7 +53,6 @@ public class MB_Grabable : MonoBehaviour
         transform.rotation = parent.rotation;
         transform.position = parent.Find("GrabPoint").position;
         transform.SetParent(parent);
-        _isGrabed = true;
         _canvas.SetActive(false);
     }
 
@@ -65,7 +61,6 @@ public class MB_Grabable : MonoBehaviour
         // On récrée un rigidbody et remet l'objet en en enfant du niveau
         transform.SetParent(level.transform);
         rb = gameObject.AddComponent<Rigidbody>();
-        _isGrabed = false;
     }
 
     /// <summary>

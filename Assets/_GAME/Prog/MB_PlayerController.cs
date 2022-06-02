@@ -6,6 +6,22 @@ using UnityEngine.InputSystem;
 [DisallowMultipleComponent]
 public class MB_PlayerController : MonoBehaviour
 {
+    #region Audio
+
+    [Header("Audio")]
+    [SerializeField, Tooltip("Bruits de pas d'Ernest")]
+    private AudioClip[] _stepsSounds;
+    [SerializeField, Tooltip("Bruit de Grab")]
+    private AudioClip _grabSound;
+    [SerializeField, Tooltip("Bruit de Degrab")]
+    private AudioClip _degrabSound;
+
+    private AudioSource _audioSource;
+
+    [Header("\n")]
+    #endregion
+
+
     [SerializeField, Tooltip("Vitesse de déplacement du personnage")]
     private float _speed = 5;
 
@@ -28,6 +44,8 @@ public class MB_PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
+
         _rb = GetComponent<Rigidbody>();
         _inputsInstance = new Controls();
         _grabPoint = transform.Find("GrabPoint");
@@ -77,6 +95,7 @@ public class MB_PlayerController : MonoBehaviour
         if(_isGrabing)
         {
             _itemGrabed.GetComponent<MB_Grabable>().Degrab();
+            _audioSource.PlayOneShot(_degrabSound);
             _isGrabing = false;
             _itemGrabed = null;
         }
@@ -86,6 +105,7 @@ public class MB_PlayerController : MonoBehaviour
             if (colliders.Length > 0)
             {
                 colliders[0].GetComponent<MB_Grabable>().Grab(transform);
+                _audioSource.PlayOneShot(_grabSound);
                 _isGrabing = true;
                 _itemGrabed = colliders[0].gameObject;
             }
@@ -101,6 +121,13 @@ public class MB_PlayerController : MonoBehaviour
     {
         eventInterract?.Invoke(transform);
             //Debug.Log("eventInterract");
+    }
+
+    private void PlayWalk()
+    {
+        _audioSource.Stop();
+        _audioSource.clip = _stepsSounds[Random.Range(0, _stepsSounds.Length)];
+        _audioSource.Play();
     }
 
     private void OnDrawGizmos()

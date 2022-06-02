@@ -11,6 +11,9 @@ public class MB_RadioController : MB_Interractable
     [SerializeField, Tooltip("Liste de musiques")]
     private RadioStation[] stations;
 
+    [SerializeField, Tooltip("Son quand on change de station")]
+    private AudioClip _changeStationSound;
+
     /// <summary>
     /// Index de la station radio actuelle
     /// </summary>
@@ -31,10 +34,18 @@ public class MB_RadioController : MB_Interractable
         }
         else
         {
-            audioSource.PlayOneShot(stations[actualStation].Songs[0]);
+            StartCoroutine(RadioCoroutine(actualStation));
             Debug.Log("Play : " + stations[actualStation].Name);
             actualStation++;
         }
+    }
+
+    IEnumerator RadioCoroutine(int stationIndex)
+    {
+        audioSource.PlayOneShot(_changeStationSound);
+        yield return new WaitForSeconds(_changeStationSound.length);
+        Debug.Log(stationIndex);
+        audioSource.PlayOneShot(stations[stationIndex].Songs[0]);
     }
 }
 
