@@ -81,7 +81,7 @@ public class MB_Grabable : MonoBehaviour
         GetComponentInChildren<MeshRenderer>().enabled = false;
 
         // On met le combustible sur le feu
-        //transform.position = fire.position;
+        transform.position = fire.position;
         transform.SetParent(fire);
 
         // On détruit l'obet quand il a finis de faire ses particules

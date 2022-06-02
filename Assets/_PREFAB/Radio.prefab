@@ -139,10 +139,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stations:
-  - name: Coutry
+  - name: Country
     songs:
-    - {fileID: 8300000, guid: e09ce07af992dd949a8de8a9f7d29d53, type: 3}
-  _changeStationSound: {fileID: 8300000, guid: 7617aa10bdd646f40a167ca4fec2b2f0, type: 3}
+    - {fileID: 8300000, guid: 60d8c72cb79a4d84783bc2676b329b00, type: 3}
+  - name: 2
+    songs:
+    - {fileID: 8300000, guid: 84b64714f3c5c464c9350405c2c605cb, type: 3}
+  _changeStationSound: {fileID: 8300000, guid: af107e927a807f84d9c1783ca863ff94, type: 3}
 --- !u!82 &4230623114529213744
 AudioSource:
   m_ObjectHideFlags: 0
