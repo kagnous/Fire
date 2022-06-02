@@ -50,8 +50,12 @@ public class MB_CameraBehavior : MonoBehaviour
     [SerializeField]
     [Tooltip("Maximal FOV of the zoom")]
     private float _maxZoom;
+
+    public float MaxZoom => _maxZoom;
     [SerializeField]
     private float _maxDezoom;
+
+    public float MaxDezoom => _maxDezoom;
 
     [SerializeField]
     [Tooltip("Speed to get the maximal speed")]
@@ -64,6 +68,8 @@ public class MB_CameraBehavior : MonoBehaviour
 
     // Final number applied to the zoom
     private float _zoomMovement;
+
+    public float ZoomMouvement => _zoomMovement;
 
     // Input getter of the zoom
     private float _zoomInput;
