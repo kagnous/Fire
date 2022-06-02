@@ -142,6 +142,7 @@ MonoBehaviour:
   - name: Coutry
     songs:
     - {fileID: 8300000, guid: e09ce07af992dd949a8de8a9f7d29d53, type: 3}
+  _changeStationSound: {fileID: 8300000, guid: 7617aa10bdd646f40a167ca4fec2b2f0, type: 3}
 --- !u!82 &4230623114529213744
 AudioSource:
   m_ObjectHideFlags: 0
@@ -151,7 +152,7 @@ AudioSource:
   m_GameObject: {fileID: 4230623114529213740}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2815460261841970011, guid: 1d38028c7ff9b594ea0c95525fe33c4e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

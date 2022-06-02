@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7190831675887971113}
   - component: {fileID: 7190831675887971116}
   - component: {fileID: 7190831675887971119}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Jerrican
   m_TagString: Fuel
   m_Icon: {fileID: 0}

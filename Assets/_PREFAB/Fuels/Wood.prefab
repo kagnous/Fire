@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 8818367470187372663}
   - component: {fileID: 917400768825047410}
   - component: {fileID: 8990017993715363406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wood
   m_TagString: Fuel
   m_Icon: {fileID: 0}

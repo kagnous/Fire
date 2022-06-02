@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5689737793309439427}
   - component: {fileID: 5689737793309439425}
   - component: {fileID: 5689737793309439426}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weel
   m_TagString: Fuel
   m_Icon: {fileID: 0}
