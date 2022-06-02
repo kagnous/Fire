@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e75c70c9d439584ebf89223d2aabc4e
+guid: bd0927f49f9b95543a1298bea49c58f8
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 50c8a84f3c1c17447be14bb75247dac1, type: 2}
+      name: Wood1
+    second: {fileID: 2100000, guid: c7d28e315a6f367429e72c110926160b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 45
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 45
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
