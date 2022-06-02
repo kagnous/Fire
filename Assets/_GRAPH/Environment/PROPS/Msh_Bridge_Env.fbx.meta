@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 9c933e33eee160d4285ba84f2e4567e3
+guid: f577080d710d7c042b9e30e546c96943
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Msh_TerreLow_1_Env_defaultMat1
-    second: {fileID: 2100000, guid: 84b9d8e76d26c544a80c3c8fb2343be9, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
