@@ -12,7 +12,7 @@ public class MB_Grabable : MonoBehaviour
     private GameObject level;
     private GameObject _canvas;
 
-    private ParticleSystem _ps;
+    private ParticleSystem[] _ps;
 
     private bool _isGrabed = false;
     private int debugAssign = 0;
@@ -20,7 +20,7 @@ public class MB_Grabable : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        _ps = GetComponent<ParticleSystem>();
+        _ps = GetComponentsInChildren<ParticleSystem>();
         _canvas = GetComponentInChildren<Canvas>().gameObject;
         _canvas.SetActive(false);
     }
@@ -92,17 +92,20 @@ public class MB_Grabable : MonoBehaviour
     {
         FindObjectOfType<MB_PlayerController>().eventGrab -= Grab;
         // On active les particules de destructions
-        _ps.Play();
+        foreach(ParticleSystem ps in _ps)
+        {
+            ps.Play();
+        }
         // On efface les trucs chiants de l'objet
         GetComponent<Collider>().enabled = false;
         GetComponentInChildren<MeshRenderer>().enabled = false;
 
         // On met le combustible sur le feu
-        transform.position = fire.position;
+        //transform.position = fire.position;
         transform.SetParent(fire);
 
         // On détruit l'obet quand il a finis de faire ses particules
             //Debug.Log(_ps.main.startLifetimeMultiplier + _ps.main.duration);
-        Destroy(gameObject, _ps.main.startLifetimeMultiplier + _ps.main.duration);
+        Destroy(gameObject, _ps[0].main.startLifetimeMultiplier + _ps[0].main.duration);
     }
 }
