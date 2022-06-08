@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_SCENE/MainMenu.unity
     guid: 94382470ced7d9d43bd2da5e28971f5a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/_SCENE/Level1.unity
-    guid: 70789b78bba79cb4baf90e2abddd6b8a
+    path: Assets/_SCENE/Arthur.unity
+    guid: 14805a3b25ef26f4384e8debfb0e6aa3
   m_configObjects: {}

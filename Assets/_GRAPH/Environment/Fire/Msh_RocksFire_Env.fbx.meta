@@ -7,22 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Msh_RockLow_3_Env
-    second: {fileID: 2100000, guid: 50c8a84f3c1c17447be14bb75247dac1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Msh_RockLow_4_Env
-    second: {fileID: 2100000, guid: 50c8a84f3c1c17447be14bb75247dac1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Msh_RockLow_5_Env
-    second: {fileID: 2100000, guid: 50c8a84f3c1c17447be14bb75247dac1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Msh_Rock_2_Env
+      name: lambert1
     second: {fileID: 2100000, guid: 50c8a84f3c1c17447be14bb75247dac1, type: 2}
   materials:
     materialImportMode: 2
