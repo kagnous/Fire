@@ -10,7 +10,7 @@ public class MB_Grabable : MonoBehaviour
 
     private Rigidbody rb;
     private GameObject level;
-    private GameObject _canvas;
+    //private GameObject _canvas;
 
     private ParticleSystem[] _ps;
 
@@ -18,8 +18,8 @@ public class MB_Grabable : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         _ps = GetComponentsInChildren<ParticleSystem>();
-        _canvas = GetComponentInChildren<Canvas>().gameObject;
-        _canvas.SetActive(false);
+        //_canvas = GetComponentInChildren<Canvas>().gameObject;
+        //_canvas.SetActive(false);
     }
     private void Start()
     {
@@ -31,7 +31,7 @@ public class MB_Grabable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
                 //Debug.Log("In range");
-            _canvas.SetActive(true);
+            //_canvas.SetActive(true);
         }
     }
 
@@ -40,7 +40,7 @@ public class MB_Grabable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
                 //Debug.Log("No in range");
-            _canvas.SetActive(false);
+            //_canvas.SetActive(false);
         }
     }
 
@@ -53,7 +53,7 @@ public class MB_Grabable : MonoBehaviour
         transform.rotation = parent.rotation;
         transform.position = parent.Find("GrabPoint").position;
         transform.SetParent(parent);
-        _canvas.SetActive(false);
+        //_canvas.SetActive(false);
     }
 
     public void Degrab()
