@@ -12,8 +12,8 @@ public abstract class MB_Interractable : MonoBehaviour
 
     private void Awake()
     {
-        _canvas = GetComponentInChildren<Canvas>().gameObject;
-        _canvas.SetActive(false);
+        //_canvas = GetComponentInChildren<Canvas>().gameObject;
+        //_canvas.SetActive(false);
     }
 
     protected virtual void OnTriggerEnter(Collider other)
@@ -21,7 +21,7 @@ public abstract class MB_Interractable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<MB_PlayerController>().eventInterract += Interract;
-            _canvas.SetActive(true);
+            //_canvas.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -29,7 +29,7 @@ public abstract class MB_Interractable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<MB_PlayerController>().eventInterract -= Interract;
-            _canvas.SetActive(false);
+            //_canvas.SetActive(false);
         }
     }
 
