@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class MB_CameraBehavior : MonoBehaviour
 {
-    
     // Final speed applied to the rotation
     private float _movementRot;
     private Transform _diorama;

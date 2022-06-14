@@ -20,6 +20,10 @@ public class MB_LevelManager : MonoBehaviour
     /// </summary>
     private int _interractions; public int Interractions { get { return _interractions; } set { _interractions = value; } }
 
+    //Events
+    public delegate void IncreaseFireDelegate(int fireSize);
+    public event IncreaseFireDelegate eventFire;
+
     void Start()
     {
         _player = FindObjectOfType<MB_PlayerController>().gameObject;
@@ -33,6 +37,9 @@ public class MB_LevelManager : MonoBehaviour
     public void AddInterractions(int value)
     {
         _interractions += value;
+
+        eventFire?.Invoke(_interractions);
+
         if(_interractions >= _interractionsMin)
         {
             _tent.OpenTent();
@@ -46,7 +53,13 @@ public class MB_LevelManager : MonoBehaviour
     public void FinishLevel(string level)
     {
         // Screenshot
-        // Transitions
-        SceneManager.LoadScene(level);
+        FindObjectOfType<CanvasGroup>().GetComponent<Animator>().SetTrigger("Start");
+        Invoke(nameof(LoadNewScene), 1.5f);
+        //SceneManager.LoadScene(level);
+    }
+
+    private void LoadNewScene()
+    {
+        SceneManager.LoadScene("Menu 3D");
     }
 }

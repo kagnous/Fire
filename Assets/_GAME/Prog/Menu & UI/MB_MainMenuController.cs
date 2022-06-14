@@ -10,8 +10,8 @@ public class MB_MainMenuController : MonoBehaviour
 
     public void ButtonPlay()
     {
-        //FindObjectOfType<CanvasGroup>().GetComponent<Animator>().SetTrigger("Start");
-        Invoke(nameof(LoadNewScene), 0f);
+        FindObjectOfType<CanvasGroup>().GetComponent<Animator>().SetTrigger("Start");
+        Invoke(nameof(LoadNewScene), 1.2f);
     }
 
     private void LoadNewScene()

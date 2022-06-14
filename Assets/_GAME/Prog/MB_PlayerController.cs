@@ -41,6 +41,11 @@ public class MB_PlayerController : MonoBehaviour
     // Event
     public delegate void InterractDelegate(Transform transform);
     public event InterractDelegate eventInterract;
+    public event InterractDelegate eventGrab;
+    
+    public delegate void PlayerInRange(bool state);
+    public event PlayerInRange eventInGrabRange;
+    public event PlayerInRange eventInInterractRange;
 
     private void Awake()
     {
@@ -108,6 +113,8 @@ public class MB_PlayerController : MonoBehaviour
                 _audioSource.PlayOneShot(_grabSound);
                 _isGrabing = true;
                 _itemGrabed = colliders[0].gameObject;
+
+                eventGrab?.Invoke(transform);
             }
             //Debug.Log(Physics.OverlapSphere(_grabPoint.position, _grabRange, layerMask).Length);
         }
@@ -128,6 +135,30 @@ public class MB_PlayerController : MonoBehaviour
         _audioSource.Stop();
         _audioSource.clip = _stepsSounds[Random.Range(0, _stepsSounds.Length)];
         _audioSource.Play();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Fuel")
+        {
+            eventInGrabRange?.Invoke(true);
+        }
+        else if (other.tag == "Interractable")
+        {
+            eventInInterractRange?.Invoke(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Fuel")
+        {
+            eventInGrabRange?.Invoke(false);
+        }
+        else if(other.tag == "Interractable")
+        {
+            eventInInterractRange?.Invoke(false);
+        }
     }
 
     private void OnDrawGizmos()

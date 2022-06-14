@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_SCENE/Level 1.unity
     guid: 6d5f82e52c9e71640a0afaa9ba7a6661
+  - enabled: 1
+    path: Assets/_SCENE/Antoine.unity
+    guid: e16df474aedc27a45ba6e5a8b2191185
   m_configObjects: {}
