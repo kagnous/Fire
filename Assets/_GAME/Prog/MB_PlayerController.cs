@@ -22,8 +22,20 @@ public class MB_PlayerController : MonoBehaviour
     #endregion
 
 
-    [SerializeField, Tooltip("Vitesse de déplacement du personnage")]
-    private float _speed = 5;
+    [SerializeField, Tooltip("Vitesse maximale de déplacement du personnage")]
+    private float _maxSpeed = 5;
+
+    [SerializeField, Tooltip("Vitesse d'acceleration du personnage")]
+    private float _acceleration = 2f;
+
+    [SerializeField, Tooltip("Acceleration selon la vitesse de base")]
+    private AnimationCurve _accelerationCurve;
+
+    [SerializeField]
+    private float _turnSmoothTime = 0.5f;
+
+    private float _currentVelocity;
+
 
     private Rigidbody _rb;
     private Controls _inputsInstance;
@@ -41,6 +53,11 @@ public class MB_PlayerController : MonoBehaviour
     // Event
     public delegate void InterractDelegate(Transform transform);
     public event InterractDelegate eventInterract;
+    public event InterractDelegate eventGrab;
+    
+    public delegate void PlayerInRange(bool state);
+    public event PlayerInRange eventInGrabRange;
+    public event PlayerInRange eventInInterractRange;
 
     private void Awake()
     {
@@ -69,12 +86,22 @@ public class MB_PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        float speed = _maxSpeed * _directionMovment.magnitude;
+
         // Déplace le player en fonction de _directionMovment (pas en y) et de sa speed
-        _rb.velocity = new Vector3(_directionMovment.x, _rb.velocity.y/_speed, _directionMovment.y) * _speed;
+        _rb.velocity += new Vector3(_directionMovment.x, _rb.velocity.y/_maxSpeed, _directionMovment.y) * _acceleration * _accelerationCurve.Evaluate(_rb.velocity.magnitude/_maxSpeed);
 
         //Le perso se tourne vers là où il se dirige si la direction est pas (0,0,0)
         if (_directionMovment != Vector2.zero)
-        { transform.rotation = Quaternion.LookRotation(new Vector3(_directionMovment.x, 0, _directionMovment.y)); } // SmoothDamp
+        { 
+            float targetAngle = Mathf.Atan2(_directionMovment.x, _directionMovment.y) * Mathf.Rad2Deg;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _currentVelocity, _turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0, angle, 0);
+
+            
+            //transform.rotation = Quaternion.LookRotation(new Vector3(_directionMovment.x, 0, _directionMovment.y)); 
+        
+        } // SmoothDamp
     }
 
     /// <summary>
@@ -108,6 +135,8 @@ public class MB_PlayerController : MonoBehaviour
                 _audioSource.PlayOneShot(_grabSound);
                 _isGrabing = true;
                 _itemGrabed = colliders[0].gameObject;
+
+                eventGrab?.Invoke(transform);
             }
             //Debug.Log(Physics.OverlapSphere(_grabPoint.position, _grabRange, layerMask).Length);
         }
@@ -128,6 +157,30 @@ public class MB_PlayerController : MonoBehaviour
         _audioSource.Stop();
         _audioSource.clip = _stepsSounds[Random.Range(0, _stepsSounds.Length)];
         _audioSource.Play();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Fuel")
+        {
+            eventInGrabRange?.Invoke(true);
+        }
+        else if (other.tag == "Interractable")
+        {
+            eventInInterractRange?.Invoke(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Fuel")
+        {
+            eventInGrabRange?.Invoke(false);
+        }
+        else if(other.tag == "Interractable")
+        {
+            eventInInterractRange?.Invoke(false);
+        }
     }
 
     private void OnDrawGizmos()

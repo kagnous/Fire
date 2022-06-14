@@ -26,8 +26,8 @@ public class MB_TentController : MB_Interractable
     {
         base.OnTriggerEnter(other);
 
-        if(!_isOpen)
-            _canvas.SetActive(false);
+        //if(!_isOpen)
+            //_canvas.SetActive(false);
     }
 
     protected override void Interract(Transform player)

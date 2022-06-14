@@ -37,13 +37,23 @@ public class MB_FireVFXController : MonoBehaviour
         //_VFX.Stop();
         _VFX.SetTexture("FlameTexture", fuel.Texture);
 
+        IncreaseSize("FlameMaxSize", "FlameMinSize", fuel.UpSize);
+
+        _VFX.SetVector3("FlameVelocity", fuel.FlameVelocity);
+
+        IncreaseSize("FlameMaxLifetime", "FlameMinLifetime", fuel.FlameLifeTime);
+
         if(fuel.ChangeColor)
         {
             _VFX.SetGradient("FlameGradient", fuel.Color);
             mainModule.startColor = fuel.Color.colorKeys[0].color;
         }
 
-        IncreaseSize("FlameMaxSize", "FlameMinSize", fuel.UpSize);
+        _VFX.SetVector3("SmokeVelocity", fuel.SmokeVelocity);
+        IncreaseSize("SmokeMaxLifetime", "SmokeMinLifetime", fuel.SmokeLifeTime);
+
+        _VFX.SetVector3("EmberVelocity", fuel.EmberVelocity);
+        IncreaseSize("EmberMaxLifetime", "EmberMinLifetime", fuel.EmberLifeTime);
     }
 
     /// <summary>
