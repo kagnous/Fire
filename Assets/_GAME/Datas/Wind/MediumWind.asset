@@ -15,7 +15,7 @@ MonoBehaviour:
   _windTimeRange: {x: 0.1, y: 0.4}
   _posRangeOne: {x: -20, y: -40, z: -5}
   _posRangeTwo: {x: 100, y: 40, z: 10}
-  _lifeTimeRange: {x: 3, y: 6}
+  _lifeTimeRange: {x: 4, y: 17}
   _speedRange: {x: 6, y: 6}
   _perlinNoiseXRange: {x: 0.05, y: 0.3}
   _perlinNoiseYRange: {x: 50, y: 100}

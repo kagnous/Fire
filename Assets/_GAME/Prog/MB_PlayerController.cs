@@ -89,7 +89,7 @@ public class MB_PlayerController : MonoBehaviour
         float speed = _maxSpeed * _directionMovment.magnitude;
 
         // Déplace le player en fonction de _directionMovment (pas en y) et de sa speed
-        _rb.velocity += new Vector3(_directionMovment.x, _rb.velocity.y/speed, _directionMovment.y) * _acceleration * _accelerationCurve.Evaluate(_rb.velocity.magnitude/_maxSpeed);
+        _rb.velocity += new Vector3(_directionMovment.x, _rb.velocity.y/_maxSpeed, _directionMovment.y) * _acceleration * _accelerationCurve.Evaluate(_rb.velocity.magnitude/_maxSpeed);
 
         //Le perso se tourne vers là où il se dirige si la direction est pas (0,0,0)
         if (_directionMovment != Vector2.zero)
