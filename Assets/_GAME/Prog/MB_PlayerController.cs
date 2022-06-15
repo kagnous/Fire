@@ -167,6 +167,12 @@ public class MB_PlayerController : MonoBehaviour
         }
         else if (other.tag == "Interractable")
         {
+            if(other.name == "Tent")
+            {
+                if(other.GetComponent<MB_TentController>().IsOpen)
+                    eventInInterractRange?.Invoke(true);
+            }
+            else
             eventInInterractRange?.Invoke(true);
         }
     }
