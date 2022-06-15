@@ -32,6 +32,9 @@ public class MB_FireController : MonoBehaviour
 
             // On brûle (détruit) le combustible
             item.Burn(transform);
+
+            if(TryGetComponent(out AudioSource audioSource))
+                audioSource.Play();
         }
     }
 }
