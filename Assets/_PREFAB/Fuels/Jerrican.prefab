@@ -779,7 +779,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
+    type: 13
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -788,7 +788,7 @@ ParticleSystem:
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
-    placementMode: 0
+    placementMode: 1
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
     m_MeshSpawn:
@@ -848,7 +848,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     m_Mesh: {fileID: 0}
-    m_MeshRenderer: {fileID: 0}
+    m_MeshRenderer: {fileID: 8361885907789999764}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_Sprite: {fileID: 0}
     m_SpriteRenderer: {fileID: 0}
@@ -4950,3 +4950,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.76423043, y: 1.0379877, z: 0.360111}
   m_Center: {x: 0.0031380057, y: 0.51899385, z: -0.00941404}
+--- !u!23 &8361885907789999764 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ca386eb0d9a265146b1967e209b4f5ff, type: 3}
+  m_PrefabInstance: {fileID: 7190831676955062800}
+  m_PrefabAsset: {fileID: 0}
