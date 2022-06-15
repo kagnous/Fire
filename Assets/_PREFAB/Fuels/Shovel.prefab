@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e5869a48f91524ca6e4e68a4f2fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: {fileID: 11400000, guid: 729af3d9b463c9f49b0ea255fc0351bb, type: 2}
+  fuel: {fileID: 11400000, guid: 30e2f7680448e8c4882b18cd6384b592, type: 2}
 --- !u!199 &7020951571643286907
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4896,8 +4896,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.34948087, y: 0.15346026, z: 1.9808179}
-  m_Center: {x: -0.10508769, y: -0.49332833, z: -0.093411386}
+  m_Size: {x: 1.9610728, y: 0.13356405, z: 0.2631133}
+  m_Center: {x: -0.061979234, y: -0.50327647, z: 0.02928175}
 --- !u!1001 &5620899447374487676
 PrefabInstance:
   m_ObjectHideFlags: 0

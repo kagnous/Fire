@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e5869a48f91524ca6e4e68a4f2fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: {fileID: 0}
+  fuel: {fileID: 11400000, guid: 1eb449b3abac180489495a4a9c4d226e, type: 2}
 --- !u!198 &3344252355222703970
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -746,7 +746,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     m_Mesh: {fileID: -3232258737265751480, guid: e4a95b3b464465f4bbe533e3991199bd, type: 3}
-    m_MeshRenderer: {fileID: 0}
+    m_MeshRenderer: {fileID: 7330367338189057279}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_Sprite: {fileID: 0}
     m_SpriteRenderer: {fileID: 0}
@@ -4925,6 +4925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390f964f06440124d97edde7641ad636, type: 3}
+--- !u!23 &7330367338189057279 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 390f964f06440124d97edde7641ad636, type: 3}
+  m_PrefabInstance: {fileID: 8249230986613682299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8498748370011920272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 390f964f06440124d97edde7641ad636, type: 3}

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e5869a48f91524ca6e4e68a4f2fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: {fileID: 0}
+  fuel: {fileID: 11400000, guid: 729af3d9b463c9f49b0ea255fc0351bb, type: 2}
 --- !u!199 &2071162247654879583
 ParticleSystemRenderer:
   serializedVersion: 6

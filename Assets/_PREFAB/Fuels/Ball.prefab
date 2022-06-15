@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e5869a48f91524ca6e4e68a4f2fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: {fileID: 11400000, guid: d0848e97a0d0f1347af55fc0ffbb751d, type: 2}
+  fuel: {fileID: 11400000, guid: 166b632b96e87244e8e767fe01a2ad92, type: 2}
 --- !u!199 &835284345172126634
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5045,7 +5045,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.12
+  m_Radius: 1.94
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3785051341632352505
 Rigidbody:

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 398989270258387819}
   - component: {fileID: 5804230529317158331}
   - component: {fileID: 7369024121540207836}
+  - component: {fileID: 8366752136729588265}
   m_Layer: 3
   m_Name: Wood1
   m_TagString: Fuel
@@ -760,7 +761,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     m_Mesh: {fileID: -3232258737265751480, guid: e4a95b3b464465f4bbe533e3991199bd, type: 3}
-    m_MeshRenderer: {fileID: 0}
+    m_MeshRenderer: {fileID: 8621579981647371620}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_Sprite: {fileID: 0}
     m_SpriteRenderer: {fileID: 0}
@@ -4852,6 +4853,22 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!54 &8366752136729588265
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899900627653749645}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &6946684715769741792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4944,3 +4961,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12723915, y: 0.06864546, z: 0.74255866}
   m_Center: {x: 0.0021946486, y: 0.036464006, z: 0.0009540662}
+--- !u!23 &8621579981647371620 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 02c1e153807b172428df072464cff5de, type: 3}
+  m_PrefabInstance: {fileID: 6946684715769741792}
+  m_PrefabAsset: {fileID: 0}
