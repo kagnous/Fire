@@ -3357,7 +3357,7 @@ GameObject:
   - component: {fileID: 1212020292}
   - component: {fileID: 1212020296}
   m_Layer: 5
-  m_Name: AlbumButton
+  m_Name: CreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4988,7 +4988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Album
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ba2b7eda0318944b5debcf486876d1, type: 2}
   m_sharedMaterial: {fileID: -1393674014929913454, guid: 46ba2b7eda0318944b5debcf486876d1, type: 2}
