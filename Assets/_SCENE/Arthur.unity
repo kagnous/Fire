@@ -1650,6 +1650,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fork
       objectReference: {fileID: 0}
+    - target: {fileID: 781664289173704659, guid: 15c477c4ba3e5994a88b333748ea3529, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 781664289173704659, guid: 15c477c4ba3e5994a88b333748ea3529, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 781664289173704659, guid: 15c477c4ba3e5994a88b333748ea3529, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.014
+      objectReference: {fileID: 0}
     - target: {fileID: 9145449845073981296, guid: 15c477c4ba3e5994a88b333748ea3529, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3841,8 +3853,8 @@ Transform:
   m_Children:
   - {fileID: 883674056}
   - {fileID: 1732152134}
-  - {fileID: 1722367966}
   - {fileID: 162851322}
+  - {fileID: 1722367966}
   m_Father: {fileID: 1277065637}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
