@@ -12,6 +12,9 @@ public class MB_LevelManager : MonoBehaviour
     private GameObject _player;
     private MB_TentController _tent;
 
+    [SerializeField]
+    private string _nextLevel = "Menu 3D";
+
     [SerializeField, Tooltip("Nombre d'interractions requises pour terminer le niveau")]
     private int _interractionsMin = 1;
 
@@ -60,6 +63,6 @@ public class MB_LevelManager : MonoBehaviour
 
     private void LoadNewScene()
     {
-        SceneManager.LoadScene("Menu 3D");
+        SceneManager.LoadScene(_nextLevel);
     }
 }

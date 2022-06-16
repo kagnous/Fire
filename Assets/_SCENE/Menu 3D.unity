@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.253
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.018874401, g: 0.051875446, b: 0.04207154, a: 0.253}
+  m_IndirectSpecularColor: {r: 0.017561404, g: 0.015565031, b: 0.05838215, a: 0.253}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
 --- !u!114 &152248607
 MonoBehaviour:
@@ -1711,6 +1711,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4987200860314056322, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
     - {fileID: 3359072731820766304, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+    - {fileID: 142168957250700737, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
 --- !u!4 &570610007 stripped
 Transform:
@@ -3357,7 +3358,7 @@ GameObject:
   - component: {fileID: 1212020292}
   - component: {fileID: 1212020296}
   m_Layer: 5
-  m_Name: AlbumButton
+  m_Name: CreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4988,7 +4989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Album
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ba2b7eda0318944b5debcf486876d1, type: 2}
   m_sharedMaterial: {fileID: -1393674014929913454, guid: 46ba2b7eda0318944b5debcf486876d1, type: 2}

@@ -17,9 +17,17 @@ public class MB_AnimalsController : MonoBehaviour
 
     private bool isGoOut = false;
 
+    private SkinnedMeshRenderer[] meshes;
+
     void Start()
     {
-        GetComponent<MeshRenderer>().enabled = false;
+        //GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+        meshes = GetComponentsInChildren<SkinnedMeshRenderer>();
+        for (int i = 0; i < meshes.Length; i++)
+        {
+            meshes[i].enabled = false;
+        }
+
         _levelManager = FindObjectOfType<MB_LevelManager>();
         _levelManager.eventFire += Move;
     }
@@ -36,6 +44,7 @@ public class MB_AnimalsController : MonoBehaviour
             else
             {
                 // Anim idle
+                GetComponentInChildren<Animator>().SetTrigger("InPosition");
                 this.enabled = false;
             }
         }
@@ -46,7 +55,12 @@ public class MB_AnimalsController : MonoBehaviour
         if(fire >= _fireLevel)
         {
             isGoOut = true;
-            GetComponent<MeshRenderer>().enabled = true;
+            //GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+            meshes = GetComponentsInChildren<SkinnedMeshRenderer>();
+            for (int i = 0; i < meshes.Length; i++)
+            {
+                meshes[i].enabled = true;
+            }
             // Anim marche
             _levelManager.eventFire -= Move;
         }
