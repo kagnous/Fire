@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UPDB.Sound.AmbianceMixer
-{
+//namespace UPDB.Sound.AmbianceMixer
+
     public class AmbianceMixer : MonoBehaviour
     {
         #region Serialized Variables
@@ -223,4 +223,4 @@ namespace UPDB.Sound.AmbianceMixer
             }
         }
     } 
-}
+

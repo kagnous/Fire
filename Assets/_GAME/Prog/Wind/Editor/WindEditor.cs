@@ -4,10 +4,10 @@ using UnityEngine;
 [CustomEditor(typeof(WindInstancier))]
 public class WindEditor : Editor
 {
-    private BuiltInConfig _presetConfigState = BuiltInConfig.FrequentLoop;
-    private BuiltInConfig _loopState = BuiltInConfig.NormalLength;
-    private BuiltInConfig _widthState = BuiltInConfig.FrequentLoop;
-    private BuiltInConfig _lengthState = BuiltInConfig.FrequentLoop;
+    private WindInstancier.BuiltInConfig _presetConfigState = WindInstancier.BuiltInConfig.FrequentLoop;
+    private WindInstancier.BuiltInConfig _loopState = WindInstancier.BuiltInConfig.NormalLength;
+    private WindInstancier.BuiltInConfig _widthState = WindInstancier.BuiltInConfig.FrequentLoop;
+    private WindInstancier.BuiltInConfig _lengthState = WindInstancier.BuiltInConfig.FrequentLoop;
 
     public override void OnInspectorGUI()
     {
@@ -19,12 +19,12 @@ public class WindEditor : Editor
 
             EditorGUILayout.BeginHorizontal();
             {
-                if (_presetConfigState != BuiltInConfig.LowWind)
+                if (_presetConfigState != WindInstancier.BuiltInConfig.LowWind)
                 {
                     if (GUILayout.Button("Low Wind"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.LowWind);
-                        _presetConfigState = BuiltInConfig.LowWind;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.LowWind);
+                        _presetConfigState = WindInstancier.BuiltInConfig.LowWind;
                     } 
                 }
                 else
@@ -37,12 +37,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_presetConfigState != BuiltInConfig.MediumWind)
+                if (_presetConfigState != WindInstancier.BuiltInConfig.MediumWind)
                 {
                     if (GUILayout.Button("Medium Wind"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.MediumWind);
-                        _presetConfigState = BuiltInConfig.MediumWind;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.MediumWind);
+                        _presetConfigState = WindInstancier.BuiltInConfig.MediumWind;
                     }
                 }
                 else
@@ -55,12 +55,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_presetConfigState != BuiltInConfig.HighWind)
+                if (_presetConfigState != WindInstancier.BuiltInConfig.HighWind)
                 {
                     if (GUILayout.Button("High Wind"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.HighWind);
-                        _presetConfigState = BuiltInConfig.HighWind;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.HighWind);
+                        _presetConfigState = WindInstancier.BuiltInConfig.HighWind;
                     }
                 }
                 else
@@ -81,12 +81,12 @@ public class WindEditor : Editor
 
             EditorGUILayout.BeginHorizontal();
             {
-                if (_presetConfigState != BuiltInConfig.EveryFrameDebug)
+                if (_presetConfigState != WindInstancier.BuiltInConfig.EveryFrameDebug)
                 {
                     if (GUILayout.Button("Every Frame Debug"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.EveryFrameDebug);
-                        _presetConfigState = BuiltInConfig.EveryFrameDebug;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.EveryFrameDebug);
+                        _presetConfigState = WindInstancier.BuiltInConfig.EveryFrameDebug;
                     } 
                 }
                 else
@@ -99,12 +99,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_presetConfigState != BuiltInConfig.LoopDebug)
+                if (_presetConfigState != WindInstancier.BuiltInConfig.LoopDebug)
                 {
                     if (GUILayout.Button("Loop Debug"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.LoopDebug);
-                        _presetConfigState = BuiltInConfig.LoopDebug;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.LoopDebug);
+                        _presetConfigState = WindInstancier.BuiltInConfig.LoopDebug;
                     }
                 }
                 else
@@ -123,12 +123,12 @@ public class WindEditor : Editor
 
             EditorGUILayout.BeginHorizontal();
             {
-                if (_loopState != BuiltInConfig.NoLoop)
+                if (_loopState != WindInstancier.BuiltInConfig.NoLoop)
                 {
                     if (GUILayout.Button("No Loop"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.NoLoop);
-                        _loopState = BuiltInConfig.NoLoop;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.NoLoop);
+                        _loopState = WindInstancier.BuiltInConfig.NoLoop;
                     } 
                 }
                 else
@@ -141,12 +141,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_loopState != BuiltInConfig.NormalLoop)
+                if (_loopState != WindInstancier.BuiltInConfig.NormalLoop)
                 {
                     if (GUILayout.Button("Normal Loop"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.NormalLoop);
-                        _loopState = BuiltInConfig.NormalLoop;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.NormalLoop);
+                        _loopState = WindInstancier.BuiltInConfig.NormalLoop;
                     } 
                 }
                 else
@@ -159,12 +159,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_loopState != BuiltInConfig.FrequentLoop)
+                if (_loopState != WindInstancier.BuiltInConfig.FrequentLoop)
                 {
                     if (GUILayout.Button("Frequent Loop"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.FrequentLoop);
-                        _loopState = BuiltInConfig.FrequentLoop;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.FrequentLoop);
+                        _loopState = WindInstancier.BuiltInConfig.FrequentLoop;
                     } 
                 }
                 else
@@ -181,12 +181,12 @@ public class WindEditor : Editor
 
             EditorGUILayout.BeginHorizontal();
             {
-                if (_widthState != BuiltInConfig.SmallWidth)
+                if (_widthState != WindInstancier.BuiltInConfig.SmallWidth)
                 {
                     if (GUILayout.Button("Small Width"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.SmallWidth);
-                        _widthState = BuiltInConfig.SmallWidth;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.SmallWidth);
+                        _widthState = WindInstancier.BuiltInConfig.SmallWidth;
                     } 
                 }
                 else
@@ -200,12 +200,12 @@ public class WindEditor : Editor
                 }
 
 
-                if (_widthState != BuiltInConfig.NormalWidth)
+                if (_widthState != WindInstancier.BuiltInConfig.NormalWidth)
                 {
                     if (GUILayout.Button("Normal Width"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.NormalWidth);
-                        _widthState = BuiltInConfig.NormalWidth;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.NormalWidth);
+                        _widthState = WindInstancier.BuiltInConfig.NormalWidth;
                     } 
                 }
                 else
@@ -218,12 +218,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_widthState != BuiltInConfig.LargeWidth)
+                if (_widthState != WindInstancier.BuiltInConfig.LargeWidth)
                 {
                     if (GUILayout.Button("Large Width"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.LargeWidth);
-                        _widthState = BuiltInConfig.LargeWidth;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.LargeWidth);
+                        _widthState = WindInstancier.BuiltInConfig.LargeWidth;
                     } 
                 }
                 else
@@ -240,12 +240,12 @@ public class WindEditor : Editor
 
             EditorGUILayout.BeginHorizontal();
             {
-                if (_lengthState != BuiltInConfig.SmallLength)
+                if (_lengthState != WindInstancier.BuiltInConfig.SmallLength)
                 {
                     if (GUILayout.Button("Small Length"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.SmallLength);
-                        _lengthState = BuiltInConfig.SmallLength;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.SmallLength);
+                        _lengthState = WindInstancier.BuiltInConfig.SmallLength;
                     } 
                 }
                 else
@@ -258,12 +258,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_lengthState != BuiltInConfig.NormalLength)
+                if (_lengthState != WindInstancier.BuiltInConfig.NormalLength)
                 {
                     if (GUILayout.Button("Normal Length"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.NormalLength);
-                        _lengthState = BuiltInConfig.NormalLength;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.NormalLength);
+                        _lengthState = WindInstancier.BuiltInConfig.NormalLength;
                     } 
                 }
                 else
@@ -276,12 +276,12 @@ public class WindEditor : Editor
                     GUI.enabled = true;
                 }
 
-                if (_lengthState != BuiltInConfig.HighLength)
+                if (_lengthState != WindInstancier.BuiltInConfig.HighLength)
                 {
                     if (GUILayout.Button("High Length"))
                     {
-                        myTarget.SetBuiltInConfig(BuiltInConfig.HighLength);
-                        _lengthState = BuiltInConfig.HighLength;
+                        myTarget.SetBuiltInConfig(WindInstancier.BuiltInConfig.HighLength);
+                        _lengthState = WindInstancier.BuiltInConfig.HighLength;
                     } 
                 }
                 else
@@ -316,20 +316,3 @@ public class WindEditor : Editor
     }
 }
 
-public enum BuiltInConfig
-{
-    LowWind,
-    MediumWind,
-    HighWind,
-    EveryFrameDebug,
-    LoopDebug,
-    NoLoop,
-    NormalLoop,
-    FrequentLoop,
-    SmallWidth,
-    NormalWidth,
-    LargeWidth,
-    SmallLength,
-    NormalLength,
-    HighLength,
-}

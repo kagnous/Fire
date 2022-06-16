@@ -1,8 +1,8 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace UPDB.Sound.AmbianceMixer
-{
+
+
     [CustomEditor(typeof(AmbianceMixer)), CanEditMultipleObjects]
     public class AmbianceMixerEditor : Editor
     {
@@ -37,4 +37,4 @@ namespace UPDB.Sound.AmbianceMixer
             GUILayout.EndVertical();
         }
     } 
-}
+

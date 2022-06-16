@@ -5023,6 +5023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38439476f0eb337468abc65388ae4f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nextLevel: Level2
   _interractionsMin: 5
 --- !u!4 &952056948
 Transform:
@@ -6295,10 +6296,6 @@ PrefabInstance:
     - target: {fileID: 4230623114529213741, guid: d34089a6a7f28484c875d449a123709a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4230623114529213744, guid: d34089a6a7f28484c875d449a123709a, type: 3}
-      propertyPath: m_Volume
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4230623114529213744, guid: d34089a6a7f28484c875d449a123709a, type: 3}
       propertyPath: MinDistance
