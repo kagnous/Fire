@@ -4122,12 +4122,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348575857}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fc71958e9935b1241937170c945c2e8d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.78764546, y: 0.04466477, z: 0.64894736}
-  m_Center: {x: 0.000068724374, y: -0.016733406, z: 0.0000059904223}
+  m_Size: {x: 0.78764546, y: 0.018823933, z: 0.64894736}
+  m_Center: {x: 0.000068724345, y: -0.029653825, z: 0.0000059904187}
 --- !u!4 &1398159875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1335738052050642638, guid: 80ca315671f882c4db1c6bc8033098d7, type: 3}
@@ -5132,12 +5132,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310951689}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fc71958e9935b1241937170c945c2e8d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7876454, y: 0.058247954, z: 0.6489473}
-  m_Center: {x: 0.0000687244, y: -0.009941798, z: 0.000006063927}
+  m_Size: {x: 0.7876454, y: 0.027842073, z: 0.6489473}
+  m_Center: {x: 0.0000687244, y: -0.02514472, z: 0.000006063936}
 --- !u!1001 &1665058890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5647,7 +5647,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520304426}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fc71958e9935b1241937170c945c2e8d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -6206,18 +6206,6 @@ PrefabInstance:
     - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.75251
-      objectReference: {fileID: 0}
-    - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.75251
-      objectReference: {fileID: 0}
-    - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.75251
       objectReference: {fileID: 0}
     - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
       propertyPath: m_LocalPosition.x

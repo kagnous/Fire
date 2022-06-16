@@ -36,6 +36,7 @@ public class MB_PlayerController : MonoBehaviour
 
     private float _currentVelocity;
 
+    private Animator _animator;
 
     private Rigidbody _rb;
     private Controls _inputsInstance;
@@ -66,6 +67,8 @@ public class MB_PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _inputsInstance = new Controls();
         _grabPoint = transform.Find("GrabPoint");
+
+        _animator = GetComponentInChildren<Animator>();
     }
 
     private void OnEnable()
@@ -98,10 +101,11 @@ public class MB_PlayerController : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _currentVelocity, _turnSmoothTime);
             transform.rotation = Quaternion.Euler(0, angle, 0);
 
-            
             //transform.rotation = Quaternion.LookRotation(new Vector3(_directionMovment.x, 0, _directionMovment.y)); 
         
         } // SmoothDamp
+
+        _animator.SetFloat("Speed", Mathf.Abs(_rb.velocity.x));
     }
 
     /// <summary>
