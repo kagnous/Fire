@@ -5425,6 +5425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: anm_idle_ernest
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0607b752cb860aa44819b42ce80aa9f3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2519283645712694850, guid: 0607b752cb860aa44819b42ce80aa9f3, type: 3}
       propertyPath: m_Enabled
       value: 1
