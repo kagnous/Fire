@@ -21,7 +21,7 @@ public class MB_MovingTexture : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _renderer.material.mainTextureOffset += _directionToMove * _speed * Time.fixedDeltaTime;
+        _renderer.material.mainTextureOffset += _directionToMove.normalized * _speed * Time.fixedDeltaTime;
     }
 
 
