@@ -186,7 +186,7 @@ namespace UPDB.Sound.AmbianceMixer
             //float maxPitch = ((pitchMixer[i].y + 12f) / 16f) + 0.5f;
             float minPitch = pitchMixer[i].x;
             float maxPitch = pitchMixer[i].y;
-            Debug.Log($"{pitchMixer[i].x} {pitchMixer[i].y}");
+            //Debug.Log($"{pitchMixer[i].x} {pitchMixer[i].y}");
             if (timerRandom)
             {
                 if (timerList[i] >= randomTimerList[i])
