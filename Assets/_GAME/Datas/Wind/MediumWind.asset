@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea504e80c0ad3004196d509ff906054b, type: 3}
   m_Name: MediumWind
   m_EditorClassIdentifier: 
-  _windTimeRange: {x: 0.1, y: 0.4}
+  _windTimeRange: {x: 0.2, y: 0.6}
   _posRangeOne: {x: -20, y: -40, z: -5}
   _posRangeTwo: {x: 100, y: 40, z: 10}
   _lifeTimeRange: {x: 4, y: 17}
