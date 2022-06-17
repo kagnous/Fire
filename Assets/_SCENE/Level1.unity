@@ -9987,31 +9987,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.983103
+      value: 0.98318136
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0026048664
+      value: -0.007975663
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.18246819
+      value: 0.18242422
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.014391387
+      value: -0.0035055892
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.594
+      value: -0.825
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.021
+      value: 21.027
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -1.567
+      value: -0.562
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ff0fb139eb1bb3548a85c0abc9447fc6, type: 3}
       propertyPath: m_Name
@@ -10282,7 +10282,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5689737793309439427, guid: 38fc9879ea5a8f24fbfba37992a3f2cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38fc9879ea5a8f24fbfba37992a3f2cc, type: 3}
 --- !u!4 &1838577065 stripped
 Transform:

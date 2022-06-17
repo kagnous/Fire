@@ -55,7 +55,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Anm_Mousse_Env 0
-  m_Speed: -1.4
+  m_Speed: -1.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6857144381882439763}
@@ -80,7 +80,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animator_Controlller_Mousse 1
+  m_Name: Animator_Controlller_Mousse 2
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -104,7 +104,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Anm_Mousse_Env
-  m_Speed: 1.4
+  m_Speed: 1.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6726588592123228818}
