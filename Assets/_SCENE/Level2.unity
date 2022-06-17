@@ -2559,8 +2559,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 85.89
       objectReference: {fileID: 0}
+    - target: {fileID: 263760254403282280, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.505
+      objectReference: {fileID: 0}
+    - target: {fileID: 263760254403282280, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.247
+      objectReference: {fileID: 0}
+    - target: {fileID: 263760254403282280, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 614005236354071706, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 614005236354071706, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303207489806017115, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2303207489806017115, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
@@ -2602,6 +2622,14 @@ PrefabInstance:
     - target: {fileID: 2303207489806017115, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.073
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518724762553685531, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015226866256588777, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
@@ -3955,7 +3983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextLevel: Menu 3D
-  _interractionsMin: 1
+  _interractionsMin: 7
 --- !u!4 &952056948
 Transform:
   m_ObjectHideFlags: 0
