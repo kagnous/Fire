@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8665602480310683163}
+  - component: {fileID: 376576270464573293}
   m_Layer: 0
   m_Name: Squirrel
   m_TagString: Untagged
@@ -32,6 +33,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376576270464573293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884616443472692151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6609b0a8d7f5a45a14e4eeb66891d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireLevel: 1
+  target: {fileID: 0}
+  _speed: 3
 --- !u!1001 &3822226995310852140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,7 +125,7 @@ Animator:
   m_GameObject: {fileID: 4164192355372778877}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: c396bcaf01720784194ee635c61e029a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 717b1ed677fedf748bf7ed9f3d4006db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

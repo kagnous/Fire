@@ -2,6 +2,25 @@ using UnityEngine;
 
 public class WindInstancier : MonoBehaviour
 {
+    public enum BuiltInConfig
+    {
+        LowWind,
+        MediumWind,
+        HighWind,
+        EveryFrameDebug,
+        LoopDebug,
+        NoLoop,
+        NormalLoop,
+        FrequentLoop,
+        SmallWidth,
+        NormalWidth,
+        LargeWidth,
+        SmallLength,
+        NormalLength,
+        HighLength,
+    }
+
+
     /*********************ACTIVE CONFIG**************************/
 
     [Header("ACTIVE CONFIG")]

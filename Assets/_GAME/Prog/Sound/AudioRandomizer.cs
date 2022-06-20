@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UPDB.Sound.AmbianceMixer
-{
+//namespace UPDB.Sound.AmbianceMixer
+
     public class AudioRandomizer : MonoBehaviour
     {
         //SERIALIZED VARIABLES___________________________________________________________________________
@@ -66,4 +66,4 @@ namespace UPDB.Sound.AmbianceMixer
             _randomIndex--;
         }
     } 
-}
+

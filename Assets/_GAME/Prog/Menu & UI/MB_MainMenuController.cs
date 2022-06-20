@@ -6,18 +6,20 @@ using UnityEngine.EventSystems;
 
 public class MB_MainMenuController : MonoBehaviour
 {
-    [SerializeField, Tooltip("Nom de la Scene à charger en cas de Play")]
-    private string levelToLoad = "Level_1";
     [SerializeField, Tooltip("Page de menu principal")]
     private GameObject mainWindow;
     [SerializeField, Tooltip("Page de menu des paramètres")]
     private GameObject settingsWindow;
     [SerializeField, Tooltip("Page de confirmation de Quit")]
     private GameObject closeWindow;
+    [SerializeField, Tooltip("Page de selection des niveaux")]
+    private GameObject levelWindow;
 
     [Header("First selected")]
     [SerializeField, Tooltip("Boutton selectionné à l'apparition de la scène")]
     private GameObject loadFirstButton;
+    [SerializeField, Tooltip("Boutton selectionné dans les levels")]
+    private GameObject levelFirstButton;
     [SerializeField, Tooltip("Boutton selectionné à l'apparition des options")]
     private GameObject optionFirstButton;
     [SerializeField, Tooltip("Boutton selectionné en quittant les options")]
@@ -29,13 +31,32 @@ public class MB_MainMenuController : MonoBehaviour
 
     private void Awake()
     {
-        //Cursor.visible = false;
+        Cursor.visible = false;
     }
 
-    public void ButtonPlay()
+    public void ButtonSelectLevel()
     {
-        FindObjectOfType<CanvasGroup>().GetComponent<Animator>().SetTrigger("Start");
-        Invoke(nameof(LoadNewScene), 1.2f);
+        mainWindow.SetActive(false);
+        levelWindow.SetActive(true);
+
+        // Place le controller sur le premier boutton option
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(levelFirstButton);
+    }
+
+    public void ButtonBackLevel()
+    {
+        mainWindow.SetActive(true);
+        levelWindow.SetActive(false);
+
+        // Place le controller sur le premier boutton option
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(loadFirstButton);
+    }
+
+    public void ButtonPlay(string level)
+    {
+        StartCoroutine(LoadLevelCoroutine(level));
     }
 
     public void ButtonSettings()
@@ -46,11 +67,6 @@ public class MB_MainMenuController : MonoBehaviour
         // Place le controller sur le premier boutton option
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionFirstButton);
-    }
-
-    public void ButtonCredits()
-    {
-        SceneManager.LoadScene("Credits");
     }
 
     public void ButtonQuit()
@@ -89,8 +105,10 @@ public class MB_MainMenuController : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(optionCloseButton);
     }
 
-    private void LoadNewScene()
+    private IEnumerator LoadLevelCoroutine(string level)
     {
-        SceneManager.LoadScene(levelToLoad);
+        FindObjectOfType<CanvasGroup>().GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1.2f);
+        SceneManager.LoadScene(level);
     }
 }
