@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.13725491, g: 0.1882353, b: 0.3019608, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 3a6f26f9f74d5184aa2227b66ca48d0a, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 324e325734ea57847ab95543ebc63b50, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -590,7 +590,7 @@ Transform:
   - {fileID: 1628771318}
   - {fileID: 1518148397}
   m_Father: {fileID: 996899955}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &118009361
 PrefabInstance:
@@ -5315,15 +5315,15 @@ Transform:
   m_Children:
   - {fileID: 1277065637}
   - {fileID: 633641098}
-  - {fileID: 1860936366}
   - {fileID: 1888037856}
+  - {fileID: 1860936366}
   - {fileID: 570610007}
+  - {fileID: 116085080}
   - {fileID: 1462705857}
   - {fileID: 1426280100}
   - {fileID: 485223081}
-  - {fileID: 116085080}
-  - {fileID: 1317412225}
   - {fileID: 1737925175}
+  - {fileID: 1317412225}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -9400,7 +9400,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 4d1ba7f56b8be9d4ca4f2ff4c29e82a9, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 040b28bce596e5c46aa92a9f460462a6, type: 2}
 --- !u!4 &1702125884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 044f69a0ec310504f989ed1ca05b3a9a, type: 3}
@@ -9552,7 +9552,7 @@ Transform:
   - {fileID: 1285550973}
   - {fileID: 688048806}
   m_Father: {fileID: 996899955}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1740039511 stripped
 Transform:
@@ -10613,7 +10613,7 @@ Transform:
   - {fileID: 119660925}
   - {fileID: 297835473}
   m_Father: {fileID: 996899955}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1902661907
 PrefabInstance:
