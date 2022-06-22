@@ -387,7 +387,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fc82d6f1afca6b64daedafbd96378fb3, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc82d6f1afca6b64daedafbd96378fb3, type: 3}
       propertyPath: m_LocalScale.z
@@ -720,6 +720,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.435
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 66df820addab68645aad35f86b7ca362, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20d1e8169b3b0814cadd454398370676, type: 2}
     - target: {fileID: 919132149155446097, guid: 66df820addab68645aad35f86b7ca362, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree6_Env
@@ -1394,7 +1398,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3b1a522929e40f84494ba1587291b88b, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b1a522929e40f84494ba1587291b88b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2063,7 +2067,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 583eeb988e6fb9d48b2e599e6545455a, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 583eeb988e6fb9d48b2e599e6545455a, type: 3}
       propertyPath: m_LocalScale.x
@@ -2187,7 +2191,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3b1a522929e40f84494ba1587291b88b, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b1a522929e40f84494ba1587291b88b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2319,6 +2323,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de52150ccc8212747aee886d7a8681fb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 919132149155446097, guid: de52150ccc8212747aee886d7a8681fb, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree4_Env (2)
@@ -2571,7 +2579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142168957250700739, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 142168957250700739, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2684,6 +2692,10 @@ PrefabInstance:
     - target: {fileID: 614005236354071706, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240451647190428179, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2303207489806017115, guid: c1d31c56c36230c4fa3440de7ae3c5a3, type: 3}
       propertyPath: m_RootOrder
@@ -3034,7 +3046,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 61504febc38a28a4898336cb8d3f439a, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61504febc38a28a4898336cb8d3f439a, type: 3}
       propertyPath: m_LocalScale.x
@@ -4302,6 +4314,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -314.083
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac81c2b2b2135b04894f38ddc0640352, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20d1e8169b3b0814cadd454398370676, type: 2}
     - target: {fileID: 919132149155446097, guid: ac81c2b2b2135b04894f38ddc0640352, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree5_Env (1)
@@ -4801,6 +4817,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -364.48
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d4f1a2d772c812d48a59e3516afcca65, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52dfd5d430a6a7341a2a4ce4029df5ab, type: 2}
     - target: {fileID: 919132149155446097, guid: d4f1a2d772c812d48a59e3516afcca65, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree2_Env (1)
@@ -4923,6 +4943,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.643982
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84b74a7aa624be649b0072c54361d2d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 919132149155446097, guid: 84b74a7aa624be649b0072c54361d2d6, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree1_Env
@@ -5288,6 +5312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac81c2b2b2135b04894f38ddc0640352, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20d1e8169b3b0814cadd454398370676, type: 2}
     - target: {fileID: 919132149155446097, guid: ac81c2b2b2135b04894f38ddc0640352, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree5_Env
@@ -5538,6 +5566,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84b74a7aa624be649b0072c54361d2d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 919132149155446097, guid: 84b74a7aa624be649b0072c54361d2d6, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree1_Env (2)
@@ -5821,7 +5853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230623114529213741, guid: d34089a6a7f28484c875d449a123709a, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4230623114529213741, guid: d34089a6a7f28484c875d449a123709a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6492,6 +6524,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de52150ccc8212747aee886d7a8681fb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 919132149155446097, guid: de52150ccc8212747aee886d7a8681fb, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree4_Env (1)
@@ -6635,6 +6671,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de52150ccc8212747aee886d7a8681fb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 919132149155446097, guid: de52150ccc8212747aee886d7a8681fb, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree4_Env
@@ -8349,6 +8389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3f2fd8c910d4de74494d4412471af21f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5039ad5e8ef18554b8a4669e8f79bbc4, type: 2}
     - target: {fileID: 919132149155446097, guid: 3f2fd8c910d4de74494d4412471af21f, type: 3}
       propertyPath: m_Name
       value: Msh_Cascade_Lake_Env
@@ -8504,7 +8548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7177221443277776351, guid: 81f64584fd1dabc4091bd30a209fdf1e, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7177221443277776351, guid: 81f64584fd1dabc4091bd30a209fdf1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8793,7 +8837,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7666ed38d7d34434b8fc68a0910cd192, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7666ed38d7d34434b8fc68a0910cd192, type: 3}
       propertyPath: m_LocalScale.x
@@ -8953,6 +8997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5043309746400823486, guid: 9720cee561407a14abfc74182b0d5554, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bbd9702df44b15346893ec410e1851af, type: 2}
     - target: {fileID: 6325688437810836140, guid: 9720cee561407a14abfc74182b0d5554, type: 3}
       propertyPath: fuel
       value: 
@@ -9063,6 +9111,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888037856}
     m_Modifications:
+    - target: {fileID: 1392148552636673181, guid: 5578a90bb20985e4bb256d30567adf45, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 5279471220553795942, guid: 5578a90bb20985e4bb256d30567adf45, type: 3}
       propertyPath: m_Name
       value: Mushroom4 (1)
@@ -9188,6 +9240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84b74a7aa624be649b0072c54361d2d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 919132149155446097, guid: 84b74a7aa624be649b0072c54361d2d6, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree1_Env (1)
@@ -9419,7 +9475,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 61504febc38a28a4898336cb8d3f439a, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61504febc38a28a4898336cb8d3f439a, type: 3}
       propertyPath: m_LocalScale.x
@@ -10542,6 +10598,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.0769958
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d4f1a2d772c812d48a59e3516afcca65, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52dfd5d430a6a7341a2a4ce4029df5ab, type: 2}
     - target: {fileID: 919132149155446097, guid: d4f1a2d772c812d48a59e3516afcca65, type: 3}
       propertyPath: m_Name
       value: Msh_Mush_Tree2_Env
@@ -10787,7 +10847,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1800201188754327194, guid: 6a83d612df07d5445a66f9795aab75c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -10870,6 +10930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom1
       objectReference: {fileID: 0}
+    - target: {fileID: 5043309746400823486, guid: 9720cee561407a14abfc74182b0d5554, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bbd9702df44b15346893ec410e1851af, type: 2}
     - target: {fileID: 6325688437810836140, guid: 9720cee561407a14abfc74182b0d5554, type: 3}
       propertyPath: fuel
       value: 
@@ -10930,6 +10994,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8477115133583949055, guid: 9720cee561407a14abfc74182b0d5554, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bbd9702df44b15346893ec410e1851af, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9720cee561407a14abfc74182b0d5554, type: 3}
 --- !u!4 &5925887049189944139 stripped
@@ -10958,7 +11026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6656013863271139691, guid: 0922a9cd017caa34b9b74a7315f54af6, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6656013863271139691, guid: 0922a9cd017caa34b9b74a7315f54af6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11079,6 +11147,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888037856}
     m_Modifications:
+    - target: {fileID: 1392148552636673181, guid: 5578a90bb20985e4bb256d30567adf45, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b012dbf11545c55489abfccb7c842232, type: 2}
     - target: {fileID: 5279471220553795942, guid: 5578a90bb20985e4bb256d30567adf45, type: 3}
       propertyPath: m_Name
       value: Mushroom4
@@ -11157,6 +11229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom3
       objectReference: {fileID: 0}
+    - target: {fileID: 1291096550220273793, guid: 6281ee7503db5cf439f82ac7f42e4b20, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20d1e8169b3b0814cadd454398370676, type: 2}
     - target: {fileID: 6052638343178314455, guid: 6281ee7503db5cf439f82ac7f42e4b20, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -11311,6 +11387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 11.788
       objectReference: {fileID: 0}
+    - target: {fileID: 1220502787049738958, guid: b85304e82e69f6a47adc2007fff29137, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52dfd5d430a6a7341a2a4ce4029df5ab, type: 2}
     - target: {fileID: 4234183351628510096, guid: b85304e82e69f6a47adc2007fff29137, type: 3}
       propertyPath: m_Name
       value: Mushroom2
