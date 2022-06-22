@@ -56,12 +56,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _Chopiness: 0.01
-    - _FlowSpeed: 0.01
+    - _FlowSpeed: 0.015
     - _FlowStrengh: 0.0075
     - _FoamDistance: 0.13
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size: -5.57
+    - _Size: -2.28
     m_Colors:
     - _DarkFoamColor: {r: 0.10978996, g: 0.12645069, b: 0.2264151, a: 1}
     - _LightFoamColor: {r: 0.3764685, g: 0.5400868, b: 0.7075472, a: 1}
