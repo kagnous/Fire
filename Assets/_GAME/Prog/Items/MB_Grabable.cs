@@ -80,6 +80,9 @@ public class MB_Grabable : MonoBehaviour
         GetComponent<Collider>().enabled = false;
         GetComponentInChildren<MeshRenderer>().enabled = false;
 
+        if (TryGetComponent(out AudioSource audioSource))
+            audioSource.Play();
+
         // On met le combustible sur le feu
         transform.position = fire.position;
         transform.SetParent(fire);

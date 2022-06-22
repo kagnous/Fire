@@ -2182,6 +2182,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40478286, y: 0.24856162, z: 1.6319252}
   m_Center: {x: 0.17500369, y: -0.07989444, z: 0.8312921}
+--- !u!114 &523629705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523629700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4aa8d51e0223804ca7389cc49e532ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireLevel: 1
+  _emissiveValue: 5
 --- !u!1001 &529331820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8326,6 +8340,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c3825b699a9f0442afff49d0d044eab, type: 3}
   m_PrefabInstance: {fileID: 1642946693}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1642946701
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642946694}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5325562352142001755, guid: 1d38028c7ff9b594ea0c95525fe33c4e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: f600cf513effee8448a105a0edb21b26, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1658313037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9104,6 +9214,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.10880125, y: 0.105638415, z: 1.3808941}
   m_Center: {x: -0.002741912, y: -0.0016109166, z: 0.6872886}
+--- !u!114 &1778998805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778998799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4aa8d51e0223804ca7389cc49e532ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireLevel: 1
+  _emissiveValue: 5.77
 --- !u!1001 &1787292441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10838,6 +10962,20 @@ CapsuleCollider:
   m_Height: 2.7120407
   m_Direction: 2
   m_Center: {x: 0.006777647, y: -0.007626873, z: 0.6706151}
+--- !u!114 &2145787989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145787980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4aa8d51e0223804ca7389cc49e532ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireLevel: 1
+  _emissiveValue: 5
 --- !u!1001 &1800201187462694974
 PrefabInstance:
   m_ObjectHideFlags: 0

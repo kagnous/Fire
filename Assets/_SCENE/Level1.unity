@@ -5137,7 +5137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextLevel: Level2
-  _interractionsMin: 6
+  _interractionsMin: 1
 --- !u!4 &952056948
 Transform:
   m_ObjectHideFlags: 0

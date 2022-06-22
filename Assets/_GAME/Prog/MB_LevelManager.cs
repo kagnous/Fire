@@ -29,6 +29,7 @@ public class MB_LevelManager : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         _player = FindObjectOfType<MB_PlayerController>().gameObject;
         _tent = FindObjectOfType<MB_TentController>();
     }
@@ -53,7 +54,7 @@ public class MB_LevelManager : MonoBehaviour
     /// Lance le niveau en question
     /// </summary>
     /// <param name="level">nom de la scène chargée ensuite</param>
-    public void FinishLevel(string level)
+    public void FinishLevel()
     {
         // Screenshot
         FindObjectOfType<CanvasGroup>().GetComponent<Animator>().SetTrigger("Start");
