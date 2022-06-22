@@ -34,7 +34,7 @@ public class MB_TentController : MB_Interractable
     {
         if(_isOpen)
         {
-            _levelManager.FinishLevel("MainMenu");
+            _levelManager.FinishLevel();
         }
         else
         {
@@ -49,7 +49,8 @@ public class MB_TentController : MB_Interractable
         {
             _isOpen = true;
             okLight.SetActive(true);
-            //Animation de tente qui s'ouvre ?
+            GetComponentInChildren<Animator>().SetTrigger("OpenTent");
+            GetComponent<AudioSource>().Play();
         }
     }
 }
