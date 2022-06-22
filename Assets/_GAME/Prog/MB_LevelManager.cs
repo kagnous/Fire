@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Controle les valeurs essentielles du niveau
@@ -9,8 +10,12 @@ using UnityEngine.SceneManagement;
 [DisallowMultipleComponent]
 public class MB_LevelManager : MonoBehaviour
 {
+    private Controls _inputsInstance;
+
     private GameObject _player;
     private MB_TentController _tent;
+
+    private bool _isPaused = false;
 
     [SerializeField]
     private string _nextLevel = "Menu 3D";
@@ -26,12 +31,28 @@ public class MB_LevelManager : MonoBehaviour
     //Events
     public delegate void IncreaseFireDelegate(int fireSize);
     public event IncreaseFireDelegate eventFire;
+    public delegate void PauseDelegate(bool pause);
+    public event PauseDelegate eventPause;
+
+    private void Awake()
+    {
+        _inputsInstance = new Controls();
+        _inputsInstance.Game.Enable();
+        _inputsInstance.Game.Pause.performed += Pause;
+
+        Cursor.visible = false;
+    }
 
     void Start()
     {
-        Cursor.visible = false;
         _player = FindObjectOfType<MB_PlayerController>().gameObject;
         _tent = FindObjectOfType<MB_TentController>();
+    }
+
+    private void Pause(InputAction.CallbackContext context)
+    {
+        _isPaused = !_isPaused;
+        eventPause?.Invoke(_isPaused);
     }
 
     /// <summary>

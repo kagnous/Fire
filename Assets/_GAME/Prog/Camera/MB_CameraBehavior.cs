@@ -70,16 +70,29 @@ public class MB_CameraBehavior : MonoBehaviour
 
     public float ZoomMouvement => _zoomMovement;
 
+    private bool _isPaused;
+
     // Input getter of the zoom
     private float _zoomInput;
+
+    private MB_LevelManager _levelManager;
 
     private void Start()
     {
         _diorama = GameObject.FindGameObjectWithTag("Level").transform;
+        _levelManager = FindObjectOfType<MB_LevelManager>();
+        _levelManager.eventPause += Pause;
+    }
+
+    private void Pause(bool isPaused)
+    {
+        _isPaused = isPaused;
     }
 
     private void FixedUpdate()
     {
+        if(!_isPaused)
+        {
         #region Diorama Rotation
 
         //Gets the Rotation to apply
@@ -132,6 +145,8 @@ public class MB_CameraBehavior : MonoBehaviour
         }
 
         #endregion
+        }
+
     }
 
     #region Movement function

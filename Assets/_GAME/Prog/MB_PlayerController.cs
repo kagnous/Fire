@@ -21,6 +21,7 @@ public class MB_PlayerController : MonoBehaviour
     [Header("\n")]
     #endregion
 
+    private MB_LevelManager _levelManager;
 
     [SerializeField, Tooltip("Vitesse maximale de déplacement du personnage")]
     private float _maxSpeed = 5;
@@ -69,6 +70,26 @@ public class MB_PlayerController : MonoBehaviour
         _grabPoint = transform.Find("GrabPoint");
 
         _animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Start()
+    {
+        _levelManager = FindObjectOfType<MB_LevelManager>();
+        _levelManager.eventPause += Pause;
+    }
+
+    private void Pause(bool isPaused)
+    {
+        if (isPaused)
+        {
+            _inputsInstance.Player.Disable();
+            _rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else
+        {
+            _inputsInstance.Player.Enable();
+            _rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
     }
 
     private void OnEnable()
