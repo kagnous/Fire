@@ -218,6 +218,24 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CameraSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""c57e0cca-1508-4898-b0cf-da80890a367d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraLerpControl"",
+                    ""type"": ""Value"",
+                    ""id"": ""4c4eb678-58e8-4c00-a8bc-eb3a8337a5dc"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -352,6 +370,28 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Up/Down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d84cfa9-7cde-4093-8d07-94c1e3b0ba0f"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba025b43-5cb9-4699-aa30-b3101e5ca943"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraLerpControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -369,6 +409,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Camera_Zoom = m_Camera.FindAction("Zoom", throwIfNotFound: true);
         m_Camera_Dezoom = m_Camera.FindAction("Dezoom", throwIfNotFound: true);
         m_Camera_UpDown = m_Camera.FindAction("Up/Down", throwIfNotFound: true);
+        m_Camera_CameraSwitch = m_Camera.FindAction("CameraSwitch", throwIfNotFound: true);
+        m_Camera_CameraLerpControl = m_Camera.FindAction("CameraLerpControl", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -481,6 +523,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Camera_Zoom;
     private readonly InputAction m_Camera_Dezoom;
     private readonly InputAction m_Camera_UpDown;
+    private readonly InputAction m_Camera_CameraSwitch;
+    private readonly InputAction m_Camera_CameraLerpControl;
     public struct CameraActions
     {
         private @Controls m_Wrapper;
@@ -489,6 +533,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Zoom => m_Wrapper.m_Camera_Zoom;
         public InputAction @Dezoom => m_Wrapper.m_Camera_Dezoom;
         public InputAction @UpDown => m_Wrapper.m_Camera_UpDown;
+        public InputAction @CameraSwitch => m_Wrapper.m_Camera_CameraSwitch;
+        public InputAction @CameraLerpControl => m_Wrapper.m_Camera_CameraLerpControl;
         public InputActionMap Get() { return m_Wrapper.m_Camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -510,6 +556,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @UpDown.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnUpDown;
                 @UpDown.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnUpDown;
                 @UpDown.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnUpDown;
+                @CameraSwitch.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraSwitch;
+                @CameraSwitch.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraSwitch;
+                @CameraSwitch.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraSwitch;
+                @CameraLerpControl.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraLerpControl;
+                @CameraLerpControl.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraLerpControl;
+                @CameraLerpControl.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraLerpControl;
             }
             m_Wrapper.m_CameraActionsCallbackInterface = instance;
             if (instance != null)
@@ -526,6 +578,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @UpDown.started += instance.OnUpDown;
                 @UpDown.performed += instance.OnUpDown;
                 @UpDown.canceled += instance.OnUpDown;
+                @CameraSwitch.started += instance.OnCameraSwitch;
+                @CameraSwitch.performed += instance.OnCameraSwitch;
+                @CameraSwitch.canceled += instance.OnCameraSwitch;
+                @CameraLerpControl.started += instance.OnCameraLerpControl;
+                @CameraLerpControl.performed += instance.OnCameraLerpControl;
+                @CameraLerpControl.canceled += instance.OnCameraLerpControl;
             }
         }
     }
@@ -542,5 +600,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnZoom(InputAction.CallbackContext context);
         void OnDezoom(InputAction.CallbackContext context);
         void OnUpDown(InputAction.CallbackContext context);
+        void OnCameraSwitch(InputAction.CallbackContext context);
+        void OnCameraLerpControl(InputAction.CallbackContext context);
     }
 }
