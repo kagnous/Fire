@@ -24,11 +24,13 @@ public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
     {
         _camera.DOMove(_target.position, _timeToMove);
         _camera.DORotateQuaternion(_target.rotation, _timeToMove);
+        Debug.Log("Là");
     }
 
     public void OnHighlight(BaseEventData eventData)
     {
         _camera.DOMove(_target.position, _timeToMove);
         _camera.DORotateQuaternion(_target.rotation, _timeToMove);
+        Debug.Log("Ici");
     }
 }

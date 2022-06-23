@@ -21,6 +21,7 @@ public class MB_PlayerController : MonoBehaviour
     [Header("\n")]
     #endregion
 
+    private MB_LevelManager _levelManager;
 
     [SerializeField, Tooltip("Vitesse maximale de déplacement du personnage")]
     private float _maxSpeed = 5;
@@ -59,6 +60,7 @@ public class MB_PlayerController : MonoBehaviour
     public delegate void PlayerInRange(bool state);
     public event PlayerInRange eventInGrabRange;
     public event PlayerInRange eventInInterractRange;
+    public event PlayerInRange eventInSleepRange;
 
     private void Awake()
     {
@@ -69,6 +71,26 @@ public class MB_PlayerController : MonoBehaviour
         _grabPoint = transform.Find("GrabPoint");
 
         _animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Start()
+    {
+        _levelManager = FindObjectOfType<MB_LevelManager>();
+        _levelManager.eventPause += Pause;
+    }
+
+    private void Pause(bool isPaused)
+    {
+        if (isPaused)
+        {
+            _inputsInstance.Player.Disable();
+            _rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else
+        {
+            _inputsInstance.Player.Enable();
+            _rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
     }
 
     private void OnEnable()
@@ -174,7 +196,7 @@ public class MB_PlayerController : MonoBehaviour
             if(other.name == "Tent")
             {
                 if(other.GetComponent<MB_TentController>().IsOpen)
-                    eventInInterractRange?.Invoke(true);
+                    eventInSleepRange?.Invoke(true);
             }
             else
             eventInInterractRange?.Invoke(true);
@@ -189,6 +211,7 @@ public class MB_PlayerController : MonoBehaviour
         }
         else if(other.tag == "Interractable")
         {
+            eventInSleepRange?.Invoke(false);
             eventInInterractRange?.Invoke(false);
         }
     }
