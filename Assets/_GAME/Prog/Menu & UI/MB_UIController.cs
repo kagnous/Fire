@@ -13,6 +13,7 @@ public class MB_UIController : MonoBehaviour
 
     private GameObject _grabIcon;
     private GameObject _interractIcon;
+    private GameObject _sleepIcon;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class MB_UIController : MonoBehaviour
         _player = FindObjectOfType<MB_PlayerController>();
         _player.eventInGrabRange += DisplayGrab;
         _player.eventInInterractRange += DisplayInterract;
+        _player.eventInSleepRange += DisplaySleep;
         _player.eventGrab += GrabClick;
         _player.eventInterract += InterractClick;
 
@@ -34,6 +36,9 @@ public class MB_UIController : MonoBehaviour
 
         _interractIcon = transform.Find("Interract").gameObject;
         _interractIcon.SetActive(false);
+
+        _sleepIcon = transform.Find("Sleep").gameObject;
+        _sleepIcon.SetActive(false);
     }
 
     private void OnEnable()
@@ -87,6 +92,12 @@ public class MB_UIController : MonoBehaviour
     {
         _interractIcon.transform.localScale = Vector3.one;
         _interractIcon.SetActive(state);
+    }
+
+    private void DisplaySleep(bool state)
+    {
+        _sleepIcon.transform.localScale = Vector3.one;
+        _sleepIcon.SetActive(state);
     }
 
     private void GrabClick(Transform transform)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Controle les valeurs essentielles du niveau
@@ -16,6 +17,11 @@ public class MB_LevelManager : MonoBehaviour
     private MB_TentController _tent;
 
     private bool _isPaused = false;
+
+    [SerializeField]
+    private GameObject _pausePanel;
+    [SerializeField]
+    private GameObject _playButton;
 
     [SerializeField]
     private string _nextLevel = "Menu 3D";
@@ -45,6 +51,7 @@ public class MB_LevelManager : MonoBehaviour
 
     void Start()
     {
+        _pausePanel.SetActive(false);
         _player = FindObjectOfType<MB_PlayerController>().gameObject;
         _tent = FindObjectOfType<MB_TentController>();
     }
@@ -53,6 +60,18 @@ public class MB_LevelManager : MonoBehaviour
     {
         _isPaused = !_isPaused;
         eventPause?.Invoke(_isPaused);
+        _pausePanel.SetActive(_isPaused);
+
+        if(_isPaused)
+        {
+            // Place le controller sur le premier boutton option
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(_playButton);
+        }
+    }
+    public void Resume()
+    {
+        Pause(new InputAction.CallbackContext());
     }
 
     /// <summary>

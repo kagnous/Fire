@@ -45,7 +45,7 @@ public class MB_AnimalsController : MonoBehaviour
             {
                 // Anim idle
                 GetComponentInChildren<Animator>().SetTrigger("InPosition");
-                this.enabled = false;
+                enabled = false;
             }
         }
     }
