@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tool_2
   m_EditorClassIdentifier: 
   _interractionValue: 1
-  _texture: {fileID: 2800000, guid: 15dbf43373aa6884bb866c07faaac80a, type: 3}
+  _texture: {fileID: 2800000, guid: b1ca9bed9033c8e4e8b724839fb88511, type: 3}
   _upSize: 0.1
   _flameVelocity: {x: 0.1, y: 1, z: 0.1}
   _flameLifeTime: 0.4

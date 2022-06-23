@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   _interractionValue: 1
-  _texture: {fileID: 2800000, guid: 7fab348396f84d044842a33e054b913a, type: 3}
+  _texture: {fileID: 2800000, guid: a197ced5ee896d54a9ea36d8c9e2d6ee, type: 3}
   _upSize: 0.1
   _flameVelocity: {x: 0.1, y: 1, z: 0.1}
   _flameLifeTime: 0.1
@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  _smokeVelocity: {x: 0.1, y: 1.5, z: 0.1}
+  _smokeVelocity: {x: 0.1, y: 2, z: 0.1}
   _smokeLifeTime: 0.1
   _emberVelocity: {x: 0.1, y: 0.85, z: 0.1}
   _emberLifeTime: 0

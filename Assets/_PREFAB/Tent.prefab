@@ -225,10 +225,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1554193974251969968, guid: 31c5f2667d3bfec4bbb684f5ec722739, type: 3}
+      propertyPath: m_Name
+      value: Tent
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 31c5f2667d3bfec4bbb684f5ec722739, type: 3}
       propertyPath: m_Name
       value: anm_tent_env
       objectReference: {fileID: 0}
+    - target: {fileID: 5988881256312858879, guid: 31c5f2667d3bfec4bbb684f5ec722739, type: 3}
+      propertyPath: m_Name
+      value: Glass_lantern
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494326664508013997, guid: 31c5f2667d3bfec4bbb684f5ec722739, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2fc2668b2a05a394aa6271867279e022, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31c5f2667d3bfec4bbb684f5ec722739, type: 3}
 --- !u!4 &1240451647190428179 stripped
@@ -283,11 +295,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6318863432032883916, guid: 1dce299ab5700184791c994c925a667f, type: 3}
       propertyPath: m_Range
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6318863432032883916, guid: 1dce299ab5700184791c994c925a667f, type: 3}
       propertyPath: m_Intensity
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6673612129641737534, guid: 1dce299ab5700184791c994c925a667f, type: 3}
       propertyPath: m_RootOrder

@@ -294,24 +294,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4213893976324549245, guid: a8d1992b9850ce54d9ea2039f7173ec3, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213893976324549245, guid: a8d1992b9850ce54d9ea2039f7173ec3, type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.size
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213893976324549245, guid: a8d1992b9850ce54d9ea2039f7173ec3, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Name
-      value: FlameMaxSize
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213893976324549245, guid: a8d1992b9850ce54d9ea2039f7173ec3, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213893976324549245, guid: a8d1992b9850ce54d9ea2039f7173ec3, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4213893976324549245, guid: a8d1992b9850ce54d9ea2039f7173ec3, type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Name
