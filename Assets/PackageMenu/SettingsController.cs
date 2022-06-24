@@ -75,7 +75,7 @@ public class SettingsController : MonoBehaviour
         {
             volume = -80;
         }
-        audioMixer.SetFloat("Music", volume);
+        audioMixer.SetFloat("Master", volume);
     }
     public void SetMusic(float volume)
     {
