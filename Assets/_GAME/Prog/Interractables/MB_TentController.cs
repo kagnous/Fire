@@ -34,6 +34,7 @@ public class MB_TentController : MB_Interractable
     {
         if(_isOpen)
         {
+            player.GetComponentInChildren<Animator>().SetTrigger("Interract");
             _levelManager.FinishLevel();
         }
         else

@@ -26,6 +26,8 @@ public class MB_RadioController : MB_Interractable
 
     protected override void Interract(Transform player)
     {
+        player.GetComponentInChildren<Animator>().SetTrigger("Interract");
+
         audioSource.Stop();
         if(actualStation > stations.Length-1)
         {
@@ -44,7 +46,7 @@ public class MB_RadioController : MB_Interractable
     {
         audioSource.PlayOneShot(_changeStationSound);
         yield return new WaitForSeconds(_changeStationSound.length);
-        Debug.Log(stationIndex);
+            //Debug.Log(stationIndex);
         audioSource.PlayOneShot(stations[stationIndex].Songs[0]);
     }
 }
