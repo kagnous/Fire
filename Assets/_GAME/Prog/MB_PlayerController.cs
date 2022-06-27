@@ -128,6 +128,7 @@ public class MB_PlayerController : MonoBehaviour
         } // SmoothDamp
 
         _animator.SetFloat("Speed", Mathf.Abs(_rb.velocity.x));
+        _animator.SetBool("Grab",_isGrabing);
     }
 
     /// <summary>
@@ -175,7 +176,7 @@ public class MB_PlayerController : MonoBehaviour
     private void Interract(InputAction.CallbackContext context)
     {
         eventInterract?.Invoke(transform);
-            //Debug.Log("eventInterract");
+        //Debug.Log("eventInterract");
     }
 
     private void PlayWalk()
