@@ -25,6 +25,11 @@ public class MB_Champi : MonoBehaviour
         _levelManager.eventFire += ChangeEmissive;
     }
 
+    private void OnDisable()
+    {
+        _levelManager.eventFire -= ChangeEmissive;
+    }
+
     private void ChangeEmissive(int i)
     {
         if(i >= _fireLevel)
