@@ -474,6 +474,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107609300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,55 +665,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.057451304
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4
+      value: 0.057451304
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 0.057451304
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.275
+      value: 2.2284
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.756
+      value: 1.6894
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.70300007
+      value: -0.6844
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.23519939
+      value: 0.27050707
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0026800765
+      value: 0.002745827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.97194177
+      value: -0.9627125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0018508804
+      value: -0.0017518572
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.134
+      value: -0.108
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -152.793
+      value: -148.611
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.348
+      value: -0.357
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_Name
@@ -714,6 +726,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
   m_PrefabInstance: {fileID: 167590699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &167590701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
+  m_PrefabInstance: {fileID: 167590699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &167590702
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167590701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d0b012cb7798a54d92425ecede65482, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &215389924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2296,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level2
+          m_StringArgument: Level2 Cinematic
           m_BoolArgument: 0
         m_CallState: 2
   _level3Selected:
@@ -2366,6 +2403,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 51e5af81-d2c8-4693-854e-d2b8cc196a8d
     m_ActionName: Menu/Return[/Keyboard/backspace,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8e5a5b1a-7b5e-422a-8b74-829048c5b590
+    m_ActionName: Game/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Menu
@@ -2919,6 +2960,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8d6a565506ac5264f8be8c76f25f95c3, type: 3}
       propertyPath: m_Name
       value: Msh_Boite_A_Outils_Env
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d6a565506ac5264f8be8c76f25f95c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6a565506ac5264f8be8c76f25f95c3, type: 3}
