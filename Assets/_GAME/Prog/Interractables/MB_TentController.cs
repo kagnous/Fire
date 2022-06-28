@@ -24,10 +24,20 @@ public class MB_TentController : MB_Interractable
 
     protected override void OnTriggerEnter(Collider other)
     {
-        base.OnTriggerEnter(other);
-
-        //if(!_isOpen)
-            //_canvas.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<MB_PlayerController>().eventSleep += Interract;
+            Debug.Log(42);
+        }
+    }
+    protected override void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<MB_PlayerController>().eventSleep -= Interract;
+            other.GetComponent<MB_PlayerController>().eventSleep -= Interract;
+            Debug.Log(52);
+        }
     }
 
     protected override void Interract(Transform player)

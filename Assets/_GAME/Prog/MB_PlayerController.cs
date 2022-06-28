@@ -56,6 +56,7 @@ public class MB_PlayerController : MonoBehaviour
     public delegate void InterractDelegate(Transform transform);
     public event InterractDelegate eventInterract;
     public event InterractDelegate eventGrab;
+    public event InterractDelegate eventSleep;
     
     public delegate void PlayerInRange(bool state);
     public event PlayerInRange eventInGrabRange;
@@ -169,21 +170,14 @@ public class MB_PlayerController : MonoBehaviour
         }
     }
 
-
     /// <summary>
     /// Lance l'event d'Interract quand l'input est appelé
     /// </summary>
     private void Interract(InputAction.CallbackContext context)
     {
         eventInterract?.Invoke(transform);
+        eventSleep?.Invoke(transform);
         //Debug.Log("eventInterract");
-    }
-
-    private void PlayWalk()
-    {
-        _audioSource.Stop();
-        _audioSource.clip = _stepsSounds[Random.Range(0, _stepsSounds.Length)];
-        _audioSource.Play();
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,14 +8,6 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public abstract class MB_Interractable : MonoBehaviour
 {
-    protected GameObject _canvas;
-
-    private void Awake()
-    {
-        //_canvas = GetComponentInChildren<Canvas>().gameObject;
-        //_canvas.SetActive(false);
-    }
-
     protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -24,7 +16,7 @@ public abstract class MB_Interractable : MonoBehaviour
             //_canvas.SetActive(true);
         }
     }
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
