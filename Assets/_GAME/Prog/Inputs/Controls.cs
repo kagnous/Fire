@@ -158,7 +158,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a012665c-2b69-463e-ab17-7f376fe88f76"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -394,6 +394,256 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Menu"",
+            ""id"": ""d8466f6f-a2dd-4e9e-9a56-b12727772353"",
+            ""actions"": [
+                {
+                    ""name"": ""ChooseLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""c530da0c-3600-4472-97c4-4563c3260864"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ValidateLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""ff6bef2e-8ead-479c-b689-6a4e846a22a2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Return"",
+                    ""type"": ""Button"",
+                    ""id"": ""51e5af81-d2c8-4693-854e-d2b8cc196a8d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""39a8f05c-ff74-4379-bd86-feb2679f3495"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""d53fa89f-5a85-49d5-a046-1e07a7faac0c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""97122b18-ac24-4605-8160-861f8bc2cc18"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""KeyboardArrows"",
+                    ""id"": ""b0549abd-195e-4c1e-9b2d-635f5a64031a"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""fe6f68dc-80b1-4aae-b623-d2c61e37669b"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""fbcde352-4888-4844-9aa3-4199892d771a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""JoystickCross"",
+                    ""id"": ""e9a808e2-767f-41bf-afb7-9fea797df3c1"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""0ad6eb8b-527c-4849-98e6-af7d06791319"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a7419cf8-4dc6-4f57-8633-39be0b8f916b"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""JoystickStick"",
+                    ""id"": ""478d0a04-647d-431c-993e-89822797f001"",
+                    ""path"": ""1DAxis(whichSideWins=1)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""46e9e69b-6c17-4195-91a1-4ccfbce24580"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""64da8498-afd7-4fa7-9f4d-9b699f0d02e7"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae7a65a7-e05e-4ecc-9a44-ae6bae72badf"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ValidateLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2bff13e0-90dc-4004-b353-d344cd7a65d3"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ValidateLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8bfbec6d-ab0f-4f31-a3ab-f7d06b535056"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Return"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f145667-daa2-45a4-add9-6cc02ec6cd75"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Return"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Game"",
+            ""id"": ""714d98be-1f32-4e3c-8155-0d40d687502f"",
+            ""actions"": [
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e5a5b1a-7b5e-422a-8b74-829048c5b590"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d0d7571e-4410-4ebf-ba36-0f813bc515d0"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""35081c1f-bd2d-430a-a15a-33b505c9c713"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -411,6 +661,14 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Camera_UpDown = m_Camera.FindAction("Up/Down", throwIfNotFound: true);
         m_Camera_CameraSwitch = m_Camera.FindAction("CameraSwitch", throwIfNotFound: true);
         m_Camera_CameraLerpControl = m_Camera.FindAction("CameraLerpControl", throwIfNotFound: true);
+        // Menu
+        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
+        m_Menu_ChooseLevel = m_Menu.FindAction("ChooseLevel", throwIfNotFound: true);
+        m_Menu_ValidateLevel = m_Menu.FindAction("ValidateLevel", throwIfNotFound: true);
+        m_Menu_Return = m_Menu.FindAction("Return", throwIfNotFound: true);
+        // Game
+        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
+        m_Game_Pause = m_Game.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -588,6 +846,88 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         }
     }
     public CameraActions @Camera => new CameraActions(this);
+
+    // Menu
+    private readonly InputActionMap m_Menu;
+    private IMenuActions m_MenuActionsCallbackInterface;
+    private readonly InputAction m_Menu_ChooseLevel;
+    private readonly InputAction m_Menu_ValidateLevel;
+    private readonly InputAction m_Menu_Return;
+    public struct MenuActions
+    {
+        private @Controls m_Wrapper;
+        public MenuActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ChooseLevel => m_Wrapper.m_Menu_ChooseLevel;
+        public InputAction @ValidateLevel => m_Wrapper.m_Menu_ValidateLevel;
+        public InputAction @Return => m_Wrapper.m_Menu_Return;
+        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+        public void SetCallbacks(IMenuActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsCallbackInterface != null)
+            {
+                @ChooseLevel.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnChooseLevel;
+                @ChooseLevel.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnChooseLevel;
+                @ChooseLevel.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnChooseLevel;
+                @ValidateLevel.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnValidateLevel;
+                @ValidateLevel.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnValidateLevel;
+                @ValidateLevel.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnValidateLevel;
+                @Return.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnReturn;
+                @Return.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnReturn;
+                @Return.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnReturn;
+            }
+            m_Wrapper.m_MenuActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ChooseLevel.started += instance.OnChooseLevel;
+                @ChooseLevel.performed += instance.OnChooseLevel;
+                @ChooseLevel.canceled += instance.OnChooseLevel;
+                @ValidateLevel.started += instance.OnValidateLevel;
+                @ValidateLevel.performed += instance.OnValidateLevel;
+                @ValidateLevel.canceled += instance.OnValidateLevel;
+                @Return.started += instance.OnReturn;
+                @Return.performed += instance.OnReturn;
+                @Return.canceled += instance.OnReturn;
+            }
+        }
+    }
+    public MenuActions @Menu => new MenuActions(this);
+
+    // Game
+    private readonly InputActionMap m_Game;
+    private IGameActions m_GameActionsCallbackInterface;
+    private readonly InputAction m_Game_Pause;
+    public struct GameActions
+    {
+        private @Controls m_Wrapper;
+        public GameActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Pause => m_Wrapper.m_Game_Pause;
+        public InputActionMap Get() { return m_Wrapper.m_Game; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActions instance)
+        {
+            if (m_Wrapper.m_GameActionsCallbackInterface != null)
+            {
+                @Pause.started -= m_Wrapper.m_GameActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnPause;
+            }
+            m_Wrapper.m_GameActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+            }
+        }
+    }
+    public GameActions @Game => new GameActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -602,5 +942,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnUpDown(InputAction.CallbackContext context);
         void OnCameraSwitch(InputAction.CallbackContext context);
         void OnCameraLerpControl(InputAction.CallbackContext context);
+    }
+    public interface IMenuActions
+    {
+        void OnChooseLevel(InputAction.CallbackContext context);
+        void OnValidateLevel(InputAction.CallbackContext context);
+        void OnReturn(InputAction.CallbackContext context);
+    }
+    public interface IGameActions
+    {
+        void OnPause(InputAction.CallbackContext context);
     }
 }
