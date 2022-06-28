@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.Events;
 
 
 public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
@@ -12,6 +13,8 @@ public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
     private Transform _target;
     [SerializeField]
     private float _timeToMove = 1f;
+    [SerializeField]
+    private UnityEvent _onHighLight;
 
     private void Awake()
     {
@@ -25,6 +28,7 @@ public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
         _camera.DOMove(_target.position, _timeToMove);
         _camera.DORotateQuaternion(_target.rotation, _timeToMove);
             //Debug.Log("Là");
+        _onHighLight.Invoke();
     }
 
     public void OnHighlight(BaseEventData eventData)
@@ -32,5 +36,6 @@ public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
         _camera.DOMove(_target.position, _timeToMove);
         _camera.DORotateQuaternion(_target.rotation, _timeToMove);
         Debug.Log("Ici");
+        _onHighLight.Invoke();
     }
 }
