@@ -352,7 +352,18 @@
                 {
                     "name": "",
                     "id": "3d84cfa9-7cde-4093-8d07-94c1e3b0ba0f",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a066def-0c50-4a52-80c7-c6ddb57b6389",
+                    "path": "<Gamepad>/rightStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
