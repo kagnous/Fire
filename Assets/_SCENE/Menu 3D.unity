@@ -146,14 +146,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10185292}
-  m_LocalRotation: {x: -0.19596994, y: 0.6206098, z: -0.16411813, w: -0.74128574}
-  m_LocalPosition: {x: 2.5068116, y: 2.47, z: -1.8625201}
+  m_LocalRotation: {x: -0.2864901, y: 0.5843666, z: -0.27302462, w: -0.7084467}
+  m_LocalPosition: {x: 2.128, y: 2.47, z: -1.816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1140758983}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 29.62, y: -79.871, z: 0.005}
+  m_LocalEulerAnglesHint: {x: 46.47, y: -77.175, z: 4.331}
 --- !u!1 &47366043
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +418,9 @@ MonoBehaviour:
   _camera: {fileID: 1539295020}
   _target: {fileID: 309944519}
   _timeToMove: 1
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &107609299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,6 +542,57 @@ MonoBehaviour:
   _camera: {fileID: 1725110009}
   _target: {fileID: 240341316}
   _timeToMove: 0.5
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsClosed
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsOpened
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 292122330}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 292122330}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &134651900
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2284
+      value: 2.175
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -685,7 +739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.6844
+      value: -0.825
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfef76127b3269341ab9c3c4abef5b71, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1705,6 +1759,9 @@ MonoBehaviour:
   _camera: {fileID: 1539295020}
   _target: {fileID: 243387257}
   _timeToMove: 1
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &394544655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1846,6 +1903,33 @@ MonoBehaviour:
   _camera: {fileID: 1725110009}
   _target: {fileID: 286738748}
   _timeToMove: 0.5
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsClosed
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsOpened
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &452215506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3178,6 +3262,9 @@ MonoBehaviour:
   _camera: {fileID: 1725110009}
   _target: {fileID: 286738748}
   _timeToMove: 0.5
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &893658761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3193,6 +3280,9 @@ MonoBehaviour:
   _camera: {fileID: 1539295020}
   _target: {fileID: 243387257}
   _timeToMove: 1
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &893658762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4196,6 +4286,9 @@ MonoBehaviour:
   _camera: {fileID: 1539295020}
   _target: {fileID: 10185293}
   _timeToMove: 1
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1212020293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4305,6 +4398,57 @@ MonoBehaviour:
   _camera: {fileID: 1725110009}
   _target: {fileID: 631671390}
   _timeToMove: 0.5
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsClosed
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 167590702}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsOpened
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 292122330}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 292122330}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1216023502
 GameObject:
   m_ObjectHideFlags: 0
@@ -5394,6 +5538,9 @@ MonoBehaviour:
   _camera: {fileID: 1539295020}
   _target: {fileID: 700040835}
   _timeToMove: 1
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1462869360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5503,6 +5650,33 @@ MonoBehaviour:
   _camera: {fileID: 1725110009}
   _target: {fileID: 2109650581}
   _timeToMove: 0.5
+  _onHighLight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 292122330}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 292122330}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1489653292
 GameObject:
   m_ObjectHideFlags: 0
@@ -6256,8 +6430,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1758789494}
+  m_Children: []
   m_Father: {fileID: 337617968}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6445,82 +6618,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757494823}
-  m_CullTransparentMesh: 1
---- !u!1 &1758789493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1758789494}
-  - component: {fileID: 1758789496}
-  - component: {fileID: 1758789495}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1758789494
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758789493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1725110009}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.322678, y: 0.0364}
-  m_SizeDelta: {x: 105.8424, y: 81.356}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1758789495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758789493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.07058824}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3babef12f59c368428426bfc7b38aa9f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1758789496
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758789493}
   m_CullTransparentMesh: 1
 --- !u!1 &1770620490
 GameObject:
