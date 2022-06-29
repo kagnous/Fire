@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 952056947}
         m_TargetAssemblyTypeName: MB_LevelManager, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -5348,7 +5348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6318863432032883916, guid: 1dce299ab5700184791c994c925a667f, type: 3}
       propertyPath: m_Intensity
-      value: 1.2
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318863432032883916, guid: 1dce299ab5700184791c994c925a667f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6673612129641737534, guid: 1dce299ab5700184791c994c925a667f, type: 3}
       propertyPath: m_RootOrder
@@ -13027,7 +13031,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 952056947}
         m_TargetAssemblyTypeName: MB_LevelManager, Assembly-CSharp
         m_MethodName: FinishLevel
         m_Mode: 1

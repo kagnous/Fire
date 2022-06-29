@@ -6167,7 +6167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 1199978747}
   _playButton: {fileID: 266706118}
-  _nextLevel: Menu 3D
+  _nextLevel: Menu3D
   _interractionsMin: 1
 --- !u!4 &952056948
 Transform:
@@ -6562,6 +6562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 1269695178}
+  _fireOffset: {x: 0, y: 0, z: 0}
+  _playerOffset: {x: 0, y: 0, z: 0}
   _lerpSpeed: 1
   _activeMode: 2
   _lerpCurve:
@@ -6591,6 +6593,17 @@ MonoBehaviour:
   _playerFollowIntensity: 0.5
   _modeEnabledList: 010101
   _scrollLerpSpeed: 0.0001
+--- !u!114 &1040831523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2289363531940367460, guid: 3caf1cba16c472d4fb3ee0b2694f627a, type: 3}
+  m_PrefabInstance: {fileID: 594911186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040831520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0fba038c338ee41837ecdded778363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1069831922
 GameObject:
   m_ObjectHideFlags: 0
@@ -10825,6 +10838,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeBeforeDestroy: 9.8
+  _playableDirector: {fileID: 0}
+  _controlsEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1040831523}
+        m_TargetAssemblyTypeName: MB_CameraBehavior, Assembly-CSharp
+        m_MethodName: EnableControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!320 &1676477348
 PlayableDirector:
   m_ObjectHideFlags: 0
