@@ -64,6 +64,7 @@ public class MB_CameraBehavior : MonoBehaviour
     [Tooltip("Maximal speed of the zoom")]
     private float _maxZoomSpeed = 3f;
 
+    private bool _isEnabled = false;
 
     // Final number applied to the zoom
     private float _zoomMovement;
@@ -91,60 +92,63 @@ public class MB_CameraBehavior : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!_isPaused)
+        if (_isEnabled)
         {
-        #region Diorama Rotation
+            if (!_isPaused)
+            {
+                #region Diorama Rotation
 
-        //Gets the Rotation to apply
-        _movementRot = CreateMovement(_rotInput, _movementRot, _maxRotSpeed * Mathf.Abs(_rotInput), _rotAcceleration);
+                //Gets the Rotation to apply
+                _movementRot = CreateMovement(_rotInput, _movementRot, _maxRotSpeed * Mathf.Abs(_rotInput), _rotAcceleration);
 
-        //Applies the rotation to the diorama
-        _diorama.Rotate(new Vector2(0, _movementRot));
+                //Applies the rotation to the diorama
+                _diorama.Rotate(new Vector2(0, _movementRot));
 
-        #endregion
+                #endregion
 
-        #region Camera Movement
+                #region Camera Movement
 
-        // Gets the camera movement to apply
-        _upMovement = CreateMovement(_upInput,_upMovement, _maxUpSpeed * Mathf.Abs(_upInput), _upAcceleration);
+                // Gets the camera movement to apply
+                _upMovement = CreateMovement(_upInput, _upMovement, _maxUpSpeed * Mathf.Abs(_upInput), _upAcceleration);
 
-        // Verifies if the next movement does not exceeds the limits
-        if(_baseMove + _upMovement > _maxCameraDown && _baseMove + _upMovement < _maxCameraUp)
-        {
-            // Applies the camera rotation
-            transform.Rotate(new Vector2(_upMovement, 0));
-            // Adds to the fake rotation
-            _baseMove += _upMovement;
-        }
-        else
-        {
-            // Reset the movement
-            _upMovement = 0;
-        }
+                // Verifies if the next movement does not exceeds the limits
+                if (_baseMove + _upMovement > _maxCameraDown && _baseMove + _upMovement < _maxCameraUp)
+                {
+                    // Applies the camera rotation
+                    transform.Rotate(new Vector2(_upMovement, 0));
+                    // Adds to the fake rotation
+                    _baseMove += _upMovement;
+                }
+                else
+                {
+                    // Reset the movement
+                    _upMovement = 0;
+                }
 
-        #endregion
+                #endregion
 
-        #region Camera Zoom
+                #region Camera Zoom
 
-        // Gets the rotation to apply
-        _zoomMovement = CreateMovement(_zoomInput, _zoomMovement, _maxZoomSpeed * Mathf.Abs(_zoomInput), _zoomAcceleration);
+                // Gets the rotation to apply
+                _zoomMovement = CreateMovement(_zoomInput, _zoomMovement, _maxZoomSpeed * Mathf.Abs(_zoomInput), _zoomAcceleration);
 
-        // Gets the main camera
-        Camera camera = Camera.main;
+                // Gets the main camera
+                Camera camera = Camera.main;
 
-        // Verifies if the next move does not exceed the limits
-        if(camera.fieldOfView + _zoomMovement < _maxDezoom && camera.fieldOfView + _zoomMovement > _maxZoom)
-        {
-            // Applies the zoom movement
-            camera.fieldOfView += _zoomMovement;
-        }
-        else
-        {
-            // Reset the movement if the move exceeds the limits
-            _zoomMovement = 0;
-        }
+                // Verifies if the next move does not exceed the limits
+                if (camera.fieldOfView + _zoomMovement < _maxDezoom && camera.fieldOfView + _zoomMovement > _maxZoom)
+                {
+                    // Applies the zoom movement
+                    camera.fieldOfView += _zoomMovement;
+                }
+                else
+                {
+                    // Reset the movement if the move exceeds the limits
+                    _zoomMovement = 0;
+                }
 
-        #endregion
+                #endregion
+            } 
         }
 
     }
@@ -227,6 +231,16 @@ public class MB_CameraBehavior : MonoBehaviour
     public void GetDezoomInput(InputAction.CallbackContext callbackContext)
     {
         _zoomInput = -callbackContext.ReadValue<float>();
+    }
+
+    public void EnableControls()
+    {
+        _isEnabled = true;
+    }
+
+    public void DisableControls()
+    {
+        _isEnabled = false;
     }
 
     #endregion

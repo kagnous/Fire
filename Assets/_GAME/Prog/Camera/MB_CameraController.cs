@@ -11,6 +11,12 @@ public class MB_CameraController : MonoBehaviour
     [SerializeField, Tooltip("Camera")]
     private Camera _camera;
 
+    [SerializeField, Tooltip("offset of camera when target is fire")]
+    private Vector3 _fireOffset;
+
+    [SerializeField, Tooltip("offset of camera when target is player")]
+    private Vector3 _playerOffset;
+
     [SerializeField, Tooltip("speed in sec of lerp")]
     private float _lerpSpeed = 1;
 
@@ -47,6 +53,8 @@ public class MB_CameraController : MonoBehaviour
 
     private bool _isFirstFrame = true;
 
+    private bool _camControlsEnabled = true;
+
 
     #region Public API
 
@@ -69,7 +77,8 @@ public class MB_CameraController : MonoBehaviour
         _player = GameObject.FindWithTag("Player").transform;
         _fire = FindObjectOfType<MB_FireController>().transform;
 
-        _camera.transform.LookAt(_fire);
+        _camera.transform.LookAt(_fire.position + _fireOffset);
+
         _fireLocalAngle = _camera.transform.localRotation;
 
         if ((int)_activeMode < _cameraStateLength - 1)
@@ -92,52 +101,55 @@ public class MB_CameraController : MonoBehaviour
 
     private void Update()
     {
-        transform.position = _fire.position;
-
-        if (_activeMode == CameraMode.FireLock)
+        if (_camControlsEnabled)
         {
-            if (_activeMode != _modeMemo)
-            {
-                if (!_isFirstFrame)
-                    CallExit(_modeMemo);
+            transform.position = _fire.position;
 
-                OnFireLockEnter();
+            if (_activeMode == CameraMode.FireLock)
+            {
+                if (_activeMode != _modeMemo)
+                {
+                    if (!_isFirstFrame)
+                        CallExit(_modeMemo);
+
+                    OnFireLockEnter();
+                }
+
+                OnFireLockStay();
+            }
+            else if (_activeMode == CameraMode.PlayerLock)
+            {
+                if (_activeMode != _modeMemo)
+                {
+                    if (!_isFirstFrame)
+                        CallExit(_modeMemo);
+
+                    OnPlayerLockEnter();
+                }
+
+                OnPlayerLockStay();
+            }
+            else if (_activeMode == CameraMode.PlayerFireMixed)
+            {
+                if (_activeMode != _modeMemo)
+                {
+                    if (!_isFirstFrame)
+                        CallExit(_modeMemo);
+
+                    OnPlayerFireMixedEnter();
+                }
+
+                OnPlayerFireMixedStay();
             }
 
-            OnFireLockStay();
+            if (_lerpCurve.keys[0].time != 0 || _lerpCurve.keys[0].value != 0)
+                _lerpCurve.keys[0] = new Keyframe(0, 0);
+            if (_lerpCurve.keys[_lerpCurve.keys.Length - 1].time != 1 || _lerpCurve.keys[_lerpCurve.keys.Length - 1].value != 1)
+                _lerpCurve.keys[_lerpCurve.keys.Length - 1] = new Keyframe(1, 1);
+
+            _modeMemo = _activeMode;
+            _isFirstFrame = false; 
         }
-        else if (_activeMode == CameraMode.PlayerLock)
-        {
-            if (_activeMode != _modeMemo)
-            {
-                if (!_isFirstFrame)
-                    CallExit(_modeMemo);
-
-                OnPlayerLockEnter();
-            }
-
-            OnPlayerLockStay();
-        }
-        else if (_activeMode == CameraMode.PlayerFireMixed)
-        {
-            if (_activeMode != _modeMemo)
-            {
-                if (!_isFirstFrame)
-                    CallExit(_modeMemo);
-
-                OnPlayerFireMixedEnter();
-            }
-
-            OnPlayerFireMixedStay();
-        }
-
-        if (_lerpCurve.keys[0].time != 0 || _lerpCurve.keys[0].value != 0)
-            _lerpCurve.keys[0] = new Keyframe(0, 0);
-        if (_lerpCurve.keys[_lerpCurve.keys.Length - 1].time != 1 || _lerpCurve.keys[_lerpCurve.keys.Length - 1].value != 1)
-            _lerpCurve.keys[_lerpCurve.keys.Length - 1] = new Keyframe(1, 1);
-
-        _modeMemo = _activeMode;
-        _isFirstFrame = false;
     }
 
     /// <summary>
@@ -174,6 +186,11 @@ public class MB_CameraController : MonoBehaviour
     {
         Debug.Log("fire stay");
 
+        Quaternion memoAngle = _camera.transform.localRotation;
+        _camera.transform.LookAt(_fire.position + _fireOffset);
+        _fireLocalAngle = _camera.transform.localRotation;
+        _camera.transform.rotation = memoAngle;
+
         _camera.transform.localRotation = Quaternion.Lerp(_toLerpAngle, _fireLocalAngle, _lerpCurve.Evaluate(_lerpTimer));
 
         if (_lerpTimer < 1)
@@ -202,7 +219,7 @@ public class MB_CameraController : MonoBehaviour
     {
         Debug.Log("player stay");
 
-        _camera.transform.LookAt(_player);
+        _camera.transform.LookAt(_player.position + _playerOffset);
         Quaternion playerTarget = _camera.transform.rotation;
         _camera.transform.rotation = _toLerpAngle;
 
@@ -234,9 +251,9 @@ public class MB_CameraController : MonoBehaviour
     {
         Debug.Log("player fire stay");
 
-        _camera.transform.LookAt(_player);
+        _camera.transform.LookAt(_player.position + _playerOffset);
         Quaternion playerTarget = _camera.transform.rotation;
-        _camera.transform.LookAt(_fire);
+        _camera.transform.LookAt(_fire.position + _fireOffset);
         Quaternion _fireAngle = _camera.transform.rotation;
         _camera.transform.rotation = _toLerpAngle;
 
@@ -282,6 +299,16 @@ public class MB_CameraController : MonoBehaviour
     {
         _playerFollowIntensity += _scrollLerpSpeed * callback.ReadValue<float>();
         _playerFollowIntensity = Mathf.Clamp(_playerFollowIntensity, 0f, 1f);
+    }
+
+    public void EnableControls()
+    {
+        _camControlsEnabled = true;
+    }
+
+    public void DisableControls()
+    {
+        _camControlsEnabled = false;
     }
 
     #endregion

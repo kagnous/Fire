@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_SCENE/Level1.unity
     guid: da8e14587d931e44fb130aebaaa78029
   - enabled: 1
+    path: Assets/_SCENE/Level2 Cinematic.unity
+    guid: 38f7265139b50d348a81ee66d30d1d99
+  - enabled: 0
     path: Assets/_SCENE/Level2.unity
     guid: ad68b2e663f75d849b9741b65f3271c0
   - enabled: 1

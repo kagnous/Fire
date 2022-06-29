@@ -3,7 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using UnityEngine.Events;
-
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using System;
 
 public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
 {
@@ -15,6 +17,9 @@ public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
     private float _timeToMove = 1f;
     [SerializeField]
     private UnityEvent _onHighLight;
+
+    [SerializeField]
+    private float _depthOfFieldValue = 1.5f;
 
     private void Awake()
     {
@@ -29,6 +34,10 @@ public class MB_CameraMenuBehavior : MonoBehaviour, ISelectHandler
         _camera.DORotateQuaternion(_target.rotation, _timeToMove);
             //Debug.Log("Là");
         _onHighLight.Invoke();
+
+        VolumeProfile volume = FindObjectOfType<Volume>().profile;
+        volume.TryGet(out DepthOfField depthOfField);
+        depthOfField.focusDistance.value = _depthOfFieldValue;
     }
 
     public void OnHighlight(BaseEventData eventData)
