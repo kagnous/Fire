@@ -3572,7 +3572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2289363531940367460, guid: 3caf1cba16c472d4fb3ee0b2694f627a, type: 3}
       propertyPath: _maxCameraDown
-      value: -15
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 2289363531940367461, guid: 3caf1cba16c472d4fb3ee0b2694f627a, type: 3}
       propertyPath: m_RootOrder
@@ -6168,7 +6168,7 @@ MonoBehaviour:
   _pausePanel: {fileID: 1199978747}
   _playButton: {fileID: 266706118}
   _nextLevel: Menu3D
-  _interractionsMin: 1
+  _interractionsMin: 8
 --- !u!4 &952056948
 Transform:
   m_ObjectHideFlags: 0
@@ -13581,6 +13581,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1887770694}
+    - target: {fileID: 6735912434364303028, guid: bd0d2266d649ccd449aaf0e806286460, type: 3}
+      propertyPath: _fireLevel
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd0d2266d649ccd449aaf0e806286460, type: 3}
 --- !u!4 &9163969999839342230 stripped
